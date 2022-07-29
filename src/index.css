@@ -22,7 +22,7 @@
     }
 
     .info {
-        @apply bg-white text-primary-900 hover:shadow-around hover:bg-primary-600 hover:text-white;
+        @apply bg-white text-primary-900 hover:shadow-around hover:bg-primary-800 hover:text-white;
     }
     .small {
         @apply py-2 px-8;
@@ -60,6 +60,5 @@
 }
 
 body {
-    background-color: aqua;
     min-height: 10000px;
 }

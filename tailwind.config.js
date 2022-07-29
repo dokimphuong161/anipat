@@ -40,7 +40,7 @@ module.exports = {
                 // => @media (min-width: 1536px) { ... }
             },
             boxShadow: {
-                around: '0px 0px 16px 5px #FFF0E1',
+                around: '0px 0px 30px 5px #FFF0E1',
             },
             minWidth: {
                 10: '10rem',
