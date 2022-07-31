@@ -1,10 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-
 const DescSliderItem = ({ item }) => {
     const Icon = item.icon;
     return (
-        <div className="banner-desc-item flex mt-8">
+        <div className="banner-desc-item flex mt-10">
             <div className="banner-desc-icon pr-8 border-r border-black">
                 <Icon className="w-[5.8rem]" />
             </div>

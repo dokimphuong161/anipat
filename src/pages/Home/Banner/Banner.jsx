@@ -6,11 +6,9 @@ import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 
 // import required modules
-import { Autoplay, Navigation, Pagination, EffectFade } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import Slider from 'react-slick';
 import { BANNER_DESC_SLIDER } from '~/constants/bannerDescSlider';
 import DescSliderItem from './DescSliderItem';
-import Slider from 'react-slick';
 // Setting background
 const backgroundImg = {
     backgroundImage: `url("${BannerImg}")`,
