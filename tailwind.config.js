@@ -7,19 +7,23 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Poppins', ...defaultTheme.fontFamily.sans],
-                poppins: ['Poppins', 'sans-serif'],
+                sans: ['Quicksand', ...defaultTheme.fontFamily.sans],
+                poppins: ['Quicksand', 'sans-serif'],
             },
             colors: {
                 primary: {
                     900: '#f14437',
                     800: '#ff3500',
                     700: '#FF4917',
-                    600: '#ed5b0d',
-                    500: '#ed890d',
+                    600: '#ff642f',
+                    500: '#ed5b0d',
+                    400: '#ed890d',
                     300: '#FFCE9D',
                     200: '#FFF0E1',
                     100: '#fff7fe',
+                },
+                green: {
+                    200: ':#7ac143',
                 },
                 overlay: 'rgba(0,0,0,.2)',
             },
@@ -47,6 +51,15 @@ module.exports = {
             },
             spacing: {
                 15: '15px',
+            },
+            keyframes: {
+                wiggle: {
+                    '0%, 100%': { transform: 'rotate(-6deg)' },
+                    '50%': { transform: 'rotate(6deg)' },
+                },
+            },
+            animation: {
+                wiggle: 'wiggle 1s ease-in-out infinite',
             },
         },
     },

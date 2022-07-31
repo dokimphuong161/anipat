@@ -1,8 +1,8 @@
-import Logo from '~/assets/images/anipat.png';
-import MenuDesktop from './MenuDesktop/MenuDesktop';
+import { useEffect, useRef, useState } from 'react';
 import { BiMenuAltRight } from 'react-icons/bi';
+import Pawsitive from '~/assets/images/pawsitive.png';
+import MenuDesktop from './MenuDesktop/MenuDesktop';
 import MenuMobile from './MenuMobile/MenuMobile';
-import { useEffect, useState, useRef } from 'react';
 const Header = () => {
     //Toggle menu
     const [openMenu, setOpenMenu] = useState(false);
@@ -32,10 +32,10 @@ const Header = () => {
         };
     }, []);
     return (
-        <header ref={headerRef} className="bg-white md:py-0 py-4 w-full">
+        <header ref={headerRef} className="z-50 bg-transparent fixed md:py-0 py-4 w-full">
             <div className="container mx-auto flex items-center">
-                <div className="z-50 md:w-auto w-full flex justify-between items-center px-4">
-                    <img src={Logo} className="md:w-auto w-28" />
+                <div className="md:w-auto w-full flex justify-between items-center px-4 md:px-0">
+                    <img src={Pawsitive} className="md:w-40 w-32" />
                     <div className="md:hidden block" onClick={handleMenuMobile}>
                         <BiMenuAltRight className="text-3xl" />
                     </div>

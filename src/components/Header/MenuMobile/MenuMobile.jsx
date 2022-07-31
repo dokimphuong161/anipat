@@ -1,5 +1,5 @@
 import { MENU_ITEMS } from '~/constants/menuItems';
-import { MdClose } from 'react-icons/md';
+import { MdClose, MdPhoneInTalk } from 'react-icons/md';
 import MenuMobileItem from './MenuMobileItem';
 import Button from '~/components/Button';
 
@@ -19,11 +19,16 @@ const MenuMobile = ({ open, onClose }) => {
                     ))}
                 </nav>
                 <div className="flex mt-4">
-                    <Button secondary small href="https://www.youtube.com/watch?v=LPGQoWG7pno&t=698s" target="_blank">
-                        Sign up
-                    </Button>
-                    <Button primary small href="https://www.youtube.com/watch?v=LPGQoWG7pno&t=698s" target="_blank">
-                        Register
+                    <Button
+                        className="text-[14px] font-bold group hover:bg-black"
+                        hasIcon
+                        primary
+                        small
+                        leftIcon={<MdPhoneInTalk />}
+                        href="https://www.youtube.com/watch?v=LPGQoWG7pno&t=698s"
+                        target="_blank"
+                    >
+                        +84 967028275
                     </Button>
                 </div>
             </div>

@@ -1,0 +1,11 @@
+.banner-desc .slick-dots {
+    text-align: left;
+}
+
+.banner-desc .slick-dots li button:before {
+    top: 25px;
+    font-size: 10px;
+}
+.banner-desc .slick-dots li.slick-active button:before {
+    color: #ed6436;
+}

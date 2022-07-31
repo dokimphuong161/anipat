@@ -1,8 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@layer base {
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    html {
+        /* @apply font-bold; */
+    }
+    p {
+        @apply font-medium;
+    }
+}
 @layer components {
     /* Button Style */
     .btn {
@@ -12,7 +24,7 @@
         @apply ml-2;
     }
     .primary {
-        @apply bg-gradient-to-r from-primary-900 to-primary-500 hover:bg-gradient-to-tl text-white;
+        @apply bg-primary-600 hover:bg-gradient-to-tl text-white;
     }
     .highlight {
         @apply bg-transparent border border-primary-900 text-primary-900 hover:bg-primary-100;
@@ -28,6 +40,21 @@
         @apply py-2 px-8;
     }
 
+    .hasIcon {
+        @apply flex items-center !pl-1.5 !py-1.5;
+    }
+
+    .icon {
+        @apply group-hover:text-black group-hover:animate-spin;
+    }
+    .icon + .title,
+    .title + .icon {
+        @apply ml-3;
+    }
+    .small .icon {
+        @apply bg-white text-primary-600 py-2 px-2 rounded-full;
+    }
+
     /* Nested menu */
     .dropdown {
         @apply absolute right-0 left-0 shadow-md text-sm z-10 min-w-10 py-2 bg-white hidden;
@@ -35,7 +62,7 @@
 
     .menus > .menu-items button,
     .menus > .menu-items a {
-        @apply px-4 py-6 hover:text-primary-900;
+        @apply px-4 py-6 hover:text-primary-900 font-semibold;
     }
 
     .dropdown > .menu-items button,
@@ -52,7 +79,7 @@
 
     /* Fixed header */
     .scrolled {
-        @apply fixed w-full left-0 right-0 top-0 -mt-32 shadow-sm;
+        @apply fixed !bg-white w-full left-0 right-0 top-0 -mt-32 shadow-sm;
     }
     .awake {
         @apply mt-0 transition-all duration-300;
@@ -61,4 +88,5 @@
 
 body {
     min-height: 10000px;
+    /* background-color: aqua; */
 }

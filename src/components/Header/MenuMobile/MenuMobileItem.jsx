@@ -10,7 +10,10 @@ const MenuMobileItem = ({ items }) => {
         <div className="py-1 ">
             {items.children ? (
                 <>
-                    <div className="sidebar-title flex items-center hover:text-primary-800" onClick={handleToggleItem}>
+                    <div
+                        className="sidebar-title flex items-center hover:text-primary-800 font-semibold"
+                        onClick={handleToggleItem}
+                    >
                         <span>{items.title}</span>
                         <MdOutlineKeyboardArrowDown
                             className={`transition ml-4 duration-300  ${openItem ? 'rotate-180' : ''}`}
@@ -24,7 +27,7 @@ const MenuMobileItem = ({ items }) => {
                 </>
             ) : (
                 <>
-                    <a href="#" className="hover:text-primary-800">
+                    <a href="#" className="hover:text-primary-800 font-semibold">
                         {items.title}
                     </a>
                 </>
