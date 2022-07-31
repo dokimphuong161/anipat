@@ -6,7 +6,7 @@ export const MENU_ITEMS = [
             { title: 'Testimonials' },
             {
                 title: 'Menu Two',
-                children: [{ title: 'Submenu One' }, { title: 'Submenu Two' }, { title: 'Submeu Three' }],
+                children: [{ title: 'Submenu One' }, { title: 'Submenu Two' }, { title: 'Submenu Three' }],
             },
             { title: 'Menu Three' },
         ],

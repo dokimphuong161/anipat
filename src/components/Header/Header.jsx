@@ -32,7 +32,10 @@ const Header = () => {
         };
     }, []);
     return (
-        <header ref={headerRef} className="z-50 bg-transparent fixed md:py-0 py-4 w-full">
+        <header
+            ref={headerRef}
+            className="z-50 md:bg-transparent bg-white md:shadow-none shadow-sm fixed md:py-0 py-3 w-full"
+        >
             <div className="container mx-auto flex items-center">
                 <div className="md:w-auto w-full flex justify-between items-center px-4 md:px-0">
                     <img src={Pawsitive} className="md:w-40 w-32" />

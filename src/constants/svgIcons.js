@@ -71,3 +71,28 @@ export const HomeIcon = ({ className, primaryFill = '#7ac143', secondaryFill = '
         </svg>
     );
 };
+
+export const ArrowIcon = ({ className, primaryFill = '#FDBB4B' }) => {
+    return (
+        <svg
+            fill={primaryFill}
+            version="1.1"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 89.4 77.4"
+            style={{ enableBackground: 'new 0 0 89.4 77.4' }}
+            xmlSpace="preserve"
+            className={className}
+        >
+            <path
+                d="M88.3,0.4C73.2,36.6,39.6,53.7,4.9,62.5c0.8-4.3,3.5-9.3,4.7-11.9c0.8-1.7-1.6-3.3-2.4-1.6c-2.1,4.6-3.8,9.3-5.2,14.2
+          c-0.4,0.1-0.7,0.2-1.1,0.3c-1.3,0.3-1.3,2.2-0.1,2.7c0.1,0,0.2,0.1,0.4,0.2c-0.1,0.5-0.2,0.9-0.3,1.4c-0.2,0.8,0.2,1.5,0.9,1.8
+          c6.5,3.1,13.1,5.7,19.8,7.9c1.5,0.5,2.4-1.6,1.1-2.6c-5.4-3.9-11.1-7-17.1-9.6c34.6-9,70.7-26.8,83.7-64.4C89.7,0,88.6-0.3,88.3,0.4
+           M6.3,68.5C6.3,68.4,6.2,68.4,6.3,68.5c2.1,0.9,4.2,2,6.3,3.2C10.2,70.8,7.9,69.8,6.3,68.5"
+            />
+        </svg>
+    );
+};
