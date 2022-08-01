@@ -13,7 +13,7 @@ const ServiceBackground = {
 const ServiceItem = ({ item }) => {
     return (
         <div
-            className="service-item text-center pb-8 px-8 pt-[105px] mb-[105px] border border-dashed border-primary-900 relative"
+            className="service-item hover:scale-105 transition duration-500 text-center pb-8 px-8 pt-[105px] mb-[95px] border border-dashed border-gray-300 relative"
             style={ServiceBackground}
         >
             <div className={`service-icon ${item.bgColor} flex items-center justify-center`}>
@@ -21,7 +21,7 @@ const ServiceItem = ({ item }) => {
             </div>
             <h3 className="text-2xl font-bold">{item.title}</h3>
             <p className="mt-4 mb-5">{item.description}</p>
-            <Button highlight small>
+            <Button shape primary small>
                 View More
             </Button>
         </div>

@@ -8,23 +8,33 @@
         margin: 0;
         padding: 0;
     }
-    html {
-        /* @apply font-bold; */
+    #root {
+        overflow: hidden;
     }
+
     p {
         @apply font-medium;
+    }
+
+    a,
+    img,
+    input {
+        @apply outline-none;
     }
 }
 @layer components {
     /* Button Style */
     .btn {
-        @apply bg-gray-300 py-4 px-12 rounded-full cursor-pointer transition-all duration-500 font-medium;
+        @apply bg-gray-300 py-4 px-12 rounded-tl-full rounded-tr-full rounded-b-full cursor-pointer transition-all duration-500 font-medium;
     }
     .btn + .btn {
         @apply ml-2;
     }
+    .shape {
+        @apply !rounded-tl-none;
+    }
     .primary {
-        @apply bg-primary-600 hover:bg-gradient-to-tl text-white;
+        @apply bg-primary-600 hover:bg-primary-900 text-white;
     }
     .highlight {
         @apply bg-transparent border border-primary-900 text-primary-900 hover:bg-primary-100;
@@ -36,6 +46,7 @@
     .info {
         @apply bg-white text-primary-900 hover:shadow-around hover:bg-primary-800 hover:text-white;
     }
+
     .small {
         @apply py-2 px-8;
     }
@@ -92,10 +103,23 @@
 
     /* Service */
     .service-icon {
-        @apply h-[150px] w-[150px] text-[70px] text-center leading-[150px] duration-300 inline-block absolute top-0 -mt-[75px] -ml-[75px] left-1/2 rounded-drag;
+        @apply h-[150px] w-[150px] text-[70px] text-center leading-[150px] duration-300 inline-block absolute top-0 -mt-[75px] -ml-[75px] left-1/2 rounded-drag border-8 border-white;
     }
-}
 
-body {
-    min-height: 10000px;
+    /* Company */
+    .company-list .company-item:hover img {
+        @apply filter-none !opacity-100 transition duration-300;
+    }
+
+    .company-list:hover img {
+        @apply opacity-30 transition duration-300 grayscale;
+    }
+
+    /* Footer */
+    .footer-social {
+        @apply p-4 rounded-full bg-gray-100 hover:bg-primary-500 hover:text-white hover:rotate-[360deg] transition duration-500;
+    }
+    .footer-social:not(:first-child) {
+        @apply ml-3;
+    }
 }
