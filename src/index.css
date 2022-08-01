@@ -84,9 +84,18 @@
     .awake {
         @apply mt-0 transition-all duration-300;
     }
+
+    /* Banner */
+    .star {
+        @apply text-yellow-300 text-[20px];
+    }
+
+    /* Service */
+    .service-icon {
+        @apply h-[150px] w-[150px] text-[70px] text-center leading-[150px] duration-300 inline-block absolute top-0 -mt-[75px] -ml-[75px] left-1/2 rounded-drag;
+    }
 }
 
 body {
     min-height: 10000px;
-    /* background-color: aqua; */
 }

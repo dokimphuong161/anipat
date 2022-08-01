@@ -45,6 +45,7 @@ module.exports = {
             },
             boxShadow: {
                 around: '0px 0px 30px 5px #FFF0E1',
+                large: '-1px 0px 42px 0px rgb(40 35 68 / 14%)',
             },
             minWidth: {
                 10: '10rem',
@@ -60,6 +61,9 @@ module.exports = {
             },
             animation: {
                 wiggle: 'wiggle 2s ease-in-out infinite',
+            },
+            borderRadius: {
+                drag: '68% 32% 27% 73% / 60% 62% 38% 40%',
             },
         },
     },

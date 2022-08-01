@@ -3,15 +3,16 @@ import BannerImg from '~/assets/images/banner.jpg';
 import DogBanner from '~/assets/images/dogs/dog-banner-1.png';
 import BookNowBtn from '~/assets/images/book-now-btn.png';
 
-// Import css files
+// Import Slick Slider
+import Slider from 'react-slick';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 
 // Import required modules
-import Slider from 'react-slick';
 import { BANNER_DESC_SLIDER } from '~/constants/bannerDescSlider';
-import DescSliderItem from './DescSliderItem';
 import { ArrowIcon } from '~/constants/svgIcons';
+import DescSliderItem from './DescSliderItem';
+import BannerRating from './BannerRating';
 
 // Setting background
 const backgroundImg = {
@@ -33,7 +34,7 @@ const Banner = (props) => {
         slidesToScroll: 1,
     };
     //Render Desc Item
-    const renderDesSliderItem = BANNER_DESC_SLIDER.map((item) => <DescSliderItem item={item} />);
+    const renderDesSliderItem = BANNER_DESC_SLIDER.map((item) => <DescSliderItem item={item} key={item.id} />);
     return (
         <section className="banner md:pt-32 pt-28" style={backgroundImg}>
             <div className="container mx-auto flex items-center justify-between">
@@ -54,7 +55,10 @@ const Banner = (props) => {
                 </div>
             </div>
 
-            <img className=" absolute top-0 right-0 md:w-[55%] md:block hidden" src={DogBanner}></img>
+            <div className="banner-img relavive md:block hidden">
+                <img className=" absolute top-0 right-0 md:w-[55%] " src={DogBanner}></img>
+                <BannerRating />
+            </div>
         </section>
     );
 };
