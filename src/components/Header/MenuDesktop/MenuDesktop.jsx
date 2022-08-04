@@ -1,11 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { MENU_ITEMS } from '~/constants/menuItems';
-import Button from '~/components/Button';
-import MenuDesktopItem from './MenuDesktopItem';
 import { MdPhoneInTalk } from 'react-icons/md';
+import Button from '~/components/Button';
+import { MENU_ITEMS } from '~/constants/menuItems';
+import MenuDesktopItem from './MenuDesktopItem';
 
-const MenuDesktop = (props) => {
+const MenuDesktop = () => {
     return (
         <div className="md:flex justify-between items-center hidden ml-8 flex-1">
             <nav>
@@ -32,7 +30,5 @@ const MenuDesktop = (props) => {
         </div>
     );
 };
-
-MenuDesktop.propTypes = {};
 
 export default MenuDesktop;

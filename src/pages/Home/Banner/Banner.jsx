@@ -22,7 +22,7 @@ const backgroundImg = {
     backgroundRepeat: 'no-repeat',
 };
 
-const Banner = (props) => {
+const Banner = () => {
     //Setting for Slick Slider
     const settings = {
         dots: true,

@@ -1,14 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import About from './About';
 import Banner from './Banner';
-import Services from './Services';
 import Company from './Company';
+import Services from './Services';
+import Blog from './Blog';
 
-const Home = (props) => {
+const Home = () => {
     return (
         <>
             <Banner />
             <Services />
+            <About />
+            <Blog />
             <Company />
         </>
     );

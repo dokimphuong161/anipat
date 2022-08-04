@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { RiArrowDownSLine, RiArrowRightSLine } from 'react-icons/ri';
 import Dropdown from './Dropdown';
+import PropTypes from 'prop-types';
 
 const MenuDesktopItem = ({ items, depthLevel }) => {
     const [dropdown, setDropdown] = useState(false);
@@ -56,6 +57,9 @@ const MenuDesktopItem = ({ items, depthLevel }) => {
     );
 };
 
-MenuDesktopItem.propTypes = {};
+MenuDesktopItem.propTypes = {
+    items: PropTypes.object.isRequired,
+    depthLevel: PropTypes.number.isRequired,
+};
 
 export default MenuDesktopItem;

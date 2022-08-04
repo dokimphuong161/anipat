@@ -1,16 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Logo from '~/assets/images/pawsitive.png';
+import { AiOutlineInstagram, AiOutlineTwitter } from 'react-icons/ai';
+import { BsFacebook, BsPhoneVibrate, BsPinterest } from 'react-icons/bs';
+import { MdOutlinePhoneInTalk } from 'react-icons/md';
+import { TbMailForward } from 'react-icons/tb';
 import AppStore from '~/assets/images/App-Store.jpg';
 import GooglePlay from '~/assets/images/Google-Play.jpg';
+import Logo from '~/assets/images/pawsitive.png';
 import Payment from '~/assets/images/payment.png';
-import { MdOutlinePhoneInTalk } from 'react-icons/md';
-import { BsFacebook, BsPinterest, BsPhoneVibrate } from 'react-icons/bs';
-import { AiOutlineTwitter, AiOutlineInstagram } from 'react-icons/ai';
-import { TbMailForward } from 'react-icons/tb';
 import { FOOTER_LINKS } from '~/constants/footerData';
 
-const Footer = (props) => {
+const Footer = () => {
     const date = new Date();
     return (
         <footer className="border-t border-dashed md:pt-20 pt-8 md:px-0 px-4">

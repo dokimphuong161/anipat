@@ -28,6 +28,8 @@ const ServiceItem = ({ item }) => {
     );
 };
 
-ServiceItem.propTypes = {};
+ServiceItem.propTypes = {
+    item: PropTypes.object.isRequired,
+};
 
 export default ServiceItem;

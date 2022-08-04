@@ -23,6 +23,10 @@
     }
 }
 @layer components {
+    /* Common */
+    .heading {
+        @apply md:text-[50px] md:leading-[60px] text-[32px] leading-[42px] font-bold;
+    }
     /* Button Style */
     .btn {
         @apply bg-gray-300 py-4 px-12 rounded-tl-full rounded-tr-full rounded-b-full cursor-pointer transition-all duration-500 font-medium;
@@ -114,7 +118,33 @@
     .company-list:hover img {
         @apply opacity-30 transition duration-300 grayscale;
     }
-
+    /* About */
+    .accordion-item:not(:first-child) {
+        @apply mt-1;
+    }
+    /* Blog */
+    .blog-cate__item {
+        @apply flex items-center text-[14px] text-gray-600;
+    }
+    .blog-cate__item:not(:first-child) {
+        @apply ml-3;
+    }
+    .blog-cate__item span {
+        @apply mr-1 text-orange-500;
+    }
+    .blog-content p {
+        overflow: hidden;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        line-height: 1.8em;
+        max-height: 3.6em;
+        line-height: 1.6em;
+        padding-right: 0;
+        padding-left: 0;
+    }
     /* Footer */
     .footer-social {
         @apply p-4 rounded-full bg-gray-100 hover:bg-primary-500 hover:text-white hover:rotate-[360deg] transition duration-500;

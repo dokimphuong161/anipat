@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames';
-
+import PropTypes from 'prop-types';
 const Button = ({
     to,
     href,
@@ -51,6 +51,21 @@ const Button = ({
     );
 };
 
-Button.propTypes = {};
+Button.propTypes = {
+    to: PropTypes.string,
+    href: PropTypes.string,
+    children: PropTypes.node.isRequired,
+    primary: PropTypes.bool,
+    secondary: PropTypes.bool,
+    info: PropTypes.bool,
+    shape: PropTypes.bool,
+    highlight: PropTypes.bool,
+    leftIcon: PropTypes.node,
+    rightIcon: PropTypes.node,
+    small: PropTypes.bool,
+    hasIcon: PropTypes.bool,
+    className: PropTypes.string,
+    onClick: PropTypes.func,
+};
 
 export default Button;

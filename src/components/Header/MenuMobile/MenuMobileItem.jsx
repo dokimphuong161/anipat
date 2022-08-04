@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
+import PropTypes from 'prop-types';
 
 const MenuMobileItem = ({ items }) => {
     const [openItem, setOpenItem] = useState(false);
@@ -36,6 +37,8 @@ const MenuMobileItem = ({ items }) => {
     );
 };
 
-MenuMobileItem.propTypes = {};
+MenuMobileItem.propTypes = {
+    items: PropTypes.object.isRequired,
+};
 
 export default MenuMobileItem;

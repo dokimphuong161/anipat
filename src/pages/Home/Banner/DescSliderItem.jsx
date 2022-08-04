@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 const DescSliderItem = ({ item }) => {
     const Icon = item.icon;
     return (
@@ -13,6 +14,8 @@ const DescSliderItem = ({ item }) => {
     );
 };
 
-DescSliderItem.propTypes = {};
+DescSliderItem.propTypes = {
+    item: PropTypes.object.isRequired,
+};
 
 export default DescSliderItem;

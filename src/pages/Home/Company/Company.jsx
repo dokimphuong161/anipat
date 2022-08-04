@@ -23,15 +23,15 @@ const Company = () => {
         ],
     };
     return (
-        <section className="company mb-14">
+        <section className="company mb-14 mt-14">
             <div className="container mx-auto">
                 <p className="text-center mb-10">Trusted by companies like</p>
 
                 <div className="company-list">
                     <Slider {...settings}>
-                        {BRANDS.map((brand, index) => (
+                        {BRANDS.map((brand, i) => (
                             <div className="company-item">
-                                <img src={brand} key={index} className="md:h-[70px] h-[60px]  mx-auto" />
+                                <img src={brand} key={i} className="md:h-[70px] h-[60px]  mx-auto" />
                             </div>
                         ))}
                     </Slider>

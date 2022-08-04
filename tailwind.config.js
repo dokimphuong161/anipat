@@ -65,6 +65,10 @@ module.exports = {
             borderRadius: {
                 drag: '68% 32% 27% 73% / 60% 62% 38% 40%',
             },
+            transitionTimingFunction: {
+                'fade-up': 'cubic-bezier(0,1,0,1)',
+                'fade-down': 'cubic-bezier(1,0,1,0)',
+            },
         },
     },
     variants: {

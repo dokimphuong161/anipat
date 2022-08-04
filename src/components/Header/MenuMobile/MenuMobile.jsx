@@ -2,6 +2,7 @@ import { MENU_ITEMS } from '~/constants/menuItems';
 import { MdClose, MdPhoneInTalk } from 'react-icons/md';
 import MenuMobileItem from './MenuMobileItem';
 import Button from '~/components/Button';
+import PropTypes from 'prop-types';
 
 const MenuMobile = ({ open, onClose }) => {
     return (
@@ -36,6 +37,9 @@ const MenuMobile = ({ open, onClose }) => {
     );
 };
 
-MenuMobile.propTypes = {};
+MenuMobile.propTypes = {
+    open: PropTypes.bool.isRequired,
+    onClose: PropTypes.func.isRequired,
+};
 
 export default MenuMobile;

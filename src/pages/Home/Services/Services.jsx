@@ -1,10 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import FootImg from '~/assets/images/foot.png';
 import { SERVICE_ITEMS } from '~/constants/serviceItems';
 import ServiceItem from './ServiceItem';
 
-const Services = (props) => {
+const Services = () => {
     // Render Service List
     const renderServiceList = SERVICE_ITEMS.map((item) => <ServiceItem item={item} key={item.id} />);
     return (
@@ -12,9 +10,7 @@ const Services = (props) => {
             <div className="container mx-auto">
                 <div className="section-heading md:w-1/2 w-auto text-center mx-auto">
                     <img src={FootImg} className="mx-auto w-14" />
-                    <h1 className="md:text-[50px] md:leading-[60px] text-[32px] leading-[42px] font-bold">
-                        We look after your pet with our best staffs
-                    </h1>
+                    <h1 className="heading">We look after your pet with our best staffs</h1>
                     <p className="mt-4">
                         Grooming Supply provides grooming services for all dog and cat breeds. We are fully committed to
                         the health.
