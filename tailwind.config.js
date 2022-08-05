@@ -25,7 +25,11 @@ module.exports = {
                 green: {
                     200: ':#7ac143',
                 },
-                overlay: 'rgba(0,0,0,.2)',
+                overlay: {
+                    200: 'rgba(0,0,0,.2)',
+                    400: 'rgba(0,0,0,.4)',
+                    500: 'rgba(0,0,0,.5)',
+                },
             },
             screens: {
                 sm: '640px',
@@ -61,6 +65,7 @@ module.exports = {
             },
             animation: {
                 wiggle: 'wiggle 2s ease-in-out infinite',
+                'ping-slow': 'ping 1s linear infinite',
             },
             borderRadius: {
                 drag: '68% 32% 27% 73% / 60% 62% 38% 40%',

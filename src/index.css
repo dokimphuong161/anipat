@@ -27,6 +27,26 @@
     .heading {
         @apply md:text-[50px] md:leading-[60px] text-[32px] leading-[42px] font-bold;
     }
+    /* Modal */
+    .modal {
+        @apply flex items-center justify-center fixed top-0 left-0 right-0 bottom-0 bg-overlay-500 z-[99] opacity-0 invisible;
+    }
+    .modal.active {
+        @apply opacity-100 visible;
+    }
+
+    .modal-content {
+        @apply relative p-8 md:w-1/2 w-4/5 bg-black transition duration-300 opacity-0 -translate-y-[250px];
+    }
+
+    .modal-content > iframe {
+        @apply md:h-[350px] h-[180px];
+    }
+
+    .modal.active .modal-content {
+        @apply opacity-100 translate-y-0;
+    }
+
     /* Button Style */
     .btn {
         @apply bg-gray-300 py-4 px-12 rounded-tl-full rounded-tr-full rounded-b-full cursor-pointer transition-all duration-500 font-medium;
@@ -70,6 +90,10 @@
         @apply bg-white text-primary-600 py-2 px-2 rounded-full;
     }
 
+    .btn-play::after {
+        @apply content-[''] absolute bg-orange-400 w-4/5 h-4/5 -z-10 rounded-full animate-ping-slow opacity-75;
+    }
+
     /* Nested menu */
     .dropdown {
         @apply absolute right-0 left-0 shadow-md text-sm z-10 min-w-10 py-2 bg-white hidden;
@@ -89,7 +113,7 @@
         @apply absolute left-full -top-2;
     }
     .overlay {
-        @apply fixed top-0 left-0  right-0 bottom-0 z-40 bg-overlay transition-all duration-300;
+        @apply fixed top-0 left-0  right-0 bottom-0 z-40 bg-overlay-200 transition-all duration-300;
     }
 
     /* Fixed header */
@@ -141,6 +165,20 @@
         -webkit-line-clamp: 2;
         line-height: 1.8em;
         max-height: 3.6em;
+        line-height: 1.6em;
+        padding-right: 0;
+        padding-left: 0;
+    }
+    /* Testimonial */
+    .testimonial-review {
+        overflow: hidden;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        line-height: 1.8em;
+        max-height: 5.4em;
         line-height: 1.6em;
         padding-right: 0;
         padding-left: 0;

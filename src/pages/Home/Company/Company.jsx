@@ -1,6 +1,7 @@
 import React from 'react';
 import Slider from 'react-slick';
 import { BRANDS } from '~/constants/brands';
+import { FaDog } from 'react-icons/fa';
 
 const Company = () => {
     // Setting slick slider
@@ -25,8 +26,12 @@ const Company = () => {
     return (
         <section className="company mb-14 mt-14">
             <div className="container mx-auto">
-                <p className="text-center mb-10">Trusted by companies like</p>
-
+                <p className="flex justify-center mb-8 text-orange-500 uppercase text-[14px] font-bold">
+                    <span className="mr-1">
+                        <FaDog />
+                    </span>{' '}
+                    Trusted by companies like
+                </p>
                 <div className="company-list">
                     <Slider {...settings}>
                         {BRANDS.map((brand, i) => (

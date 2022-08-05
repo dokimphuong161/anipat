@@ -44,7 +44,7 @@ const Accordion = ({ items }) => {
                         </span>
                     </div>
                     <div
-                        className={`accordion-content   ${
+                        className={`accordion-content ${
                             selected === index || (active && item.id === itemActive.id)
                                 ? 'max-h-[9999px] block'
                                 : 'max-h-0 hidden'

@@ -43,9 +43,9 @@ const Banner = () => {
                         <span className="text-primary-900">Taking care</span> <br />
                         of your pets <br />
                     </h3>
-                    <section className="banner-desc w-auto">
+                    <div className="banner-desc w-auto">
                         <Slider {...settings}>{renderDesSliderItem}</Slider>
-                    </section>
+                    </div>
                     <div className="banner-button mt-16 flex relative md:w-4/5 w-3/4">
                         <a href="#">
                             <img src={BookNowBtn} className="hover:rotate-12 transition duration-500 md:w-auto w-48" />
