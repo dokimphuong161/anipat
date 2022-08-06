@@ -7,7 +7,7 @@ const Services = () => {
     // Render Service List
     const renderServiceList = SERVICE_ITEMS.map((item) => <ServiceItem item={item} key={item.id} />);
     return (
-        <section className="services pt-10 md:px-0 px-4">
+        <section className="services pt-10 md:px-0 px-6 md:mt-16 mt-10" id="service">
             <div className="container mx-auto">
                 <div className="section-heading md:w-1/2 w-auto text-center mx-auto">
                     <p className="flex justify-center text-orange-500 uppercase text-[14px] font-bold">

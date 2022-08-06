@@ -1,5 +1,5 @@
 export const MENU_ITEMS = [
-    { title: 'Home' },
+    { title: 'Home', path: 'home' },
     {
         title: 'Dropdown',
         children: [
@@ -11,8 +11,8 @@ export const MENU_ITEMS = [
             { title: 'Menu Three' },
         ],
     },
-    { title: 'Service' },
-    { title: 'About' },
-    { title: 'Pricing' },
-    { title: 'Contact' },
+    { title: 'Service', path: 'service' },
+    { title: 'About', path: 'about' },
+    { title: 'Pricing', path: 'pricing' },
+    { title: 'Contact', path: 'contact' },
 ];

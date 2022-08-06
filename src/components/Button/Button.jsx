@@ -15,11 +15,12 @@ const Button = ({
     rightIcon,
     small = false,
     hasIcon,
+    type = 'submit',
     className,
     onClick,
     ...resProps
 }) => {
-    const props = { onClick, ...resProps };
+    const props = { onClick, type, ...resProps };
 
     let Comp = 'button';
 
@@ -39,6 +40,7 @@ const Button = ({
         highlight,
         small,
         hasIcon,
+
         [className]: className,
     });
 
@@ -63,6 +65,7 @@ Button.propTypes = {
     leftIcon: PropTypes.node,
     rightIcon: PropTypes.node,
     small: PropTypes.bool,
+    type: PropTypes.string,
     hasIcon: PropTypes.bool,
     className: PropTypes.string,
     onClick: PropTypes.func,

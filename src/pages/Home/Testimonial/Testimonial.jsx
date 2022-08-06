@@ -26,8 +26,8 @@ const Testimonial = () => {
         modal.classList.toggle('active');
     };
     return (
-        <section className="testimonial pt-20">
-            <div className="container mx-auto grid md:grid-cols-2 md:gap-8 grid-cols-1 md:px-0 px-4">
+        <section className="testimonial mt-4">
+            <div className="container mx-auto grid md:grid-cols-2 md:gap-8 grid-cols-1 md:px-0 px-6">
                 <div className="">
                     <div className="flex flex-col md:items-start items-center md:text-left text-center">
                         <p className="flex text-orange-500 uppercase text-[14px] font-bold">

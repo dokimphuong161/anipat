@@ -62,9 +62,19 @@ module.exports = {
                     '0%, 100%': { transform: 'rotate(-6deg)' },
                     '50%': { transform: 'rotate(6deg)' },
                 },
+                fadeIn: {
+                    '0%': { opacity: 0 },
+                    '100%': { opacity: 1 },
+                },
+                fadeOut: {
+                    '0%': { opacity: 1 },
+                    '100%': { opacity: 0 },
+                },
             },
             animation: {
                 wiggle: 'wiggle 2s ease-in-out infinite',
+                fadeIn: 'fadeIn .5s forwards',
+                fadeOut: 'fadeOut .5s forwards',
                 'ping-slow': 'ping 1s linear infinite',
             },
             borderRadius: {

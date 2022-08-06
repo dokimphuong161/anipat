@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 import PropTypes from 'prop-types';
+import { Link } from 'react-scroll';
 
 const MenuMobileItem = ({ items }) => {
     const [openItem, setOpenItem] = useState(false);
@@ -28,9 +29,17 @@ const MenuMobileItem = ({ items }) => {
                 </>
             ) : (
                 <>
-                    <a href="#" className="hover:text-primary-800 font-semibold">
+                    <Link
+                        to={items.path}
+                        activeClass="active"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration={500}
+                        className="hover:text-primary-800 font-semibold"
+                    >
                         {items.title}
-                    </a>
+                    </Link>
                 </>
             )}
         </div>

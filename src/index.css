@@ -21,6 +21,22 @@
     input {
         @apply outline-none;
     }
+    select {
+        padding: 17px 30px;
+        width: 100%;
+        -webkit-appearance: none;
+
+        background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right
+            #ddd;
+        background-size: 10px;
+        background-position: calc(100% - 30px) calc(50%);
+        background-repeat: no-repeat;
+        outline: 0;
+    }
+
+    .active {
+        @apply text-primary-900;
+    }
 }
 @layer components {
     /* Common */
@@ -182,6 +198,10 @@
         line-height: 1.6em;
         padding-right: 0;
         padding-left: 0;
+    }
+    /* Booking */
+    .input-field:not(:first-child) {
+        @apply mt-5;
     }
     /* Footer */
     .footer-social {

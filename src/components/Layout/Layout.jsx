@@ -1,4 +1,5 @@
 import Footer from '../Footer';
+import GoToTop from '../GoToTop';
 import Header from '../Header';
 
 const Layout = (props) => {
@@ -7,6 +8,7 @@ const Layout = (props) => {
             <Header />
             {props.children}
             <Footer />
+            <GoToTop />
         </section>
     );
 };

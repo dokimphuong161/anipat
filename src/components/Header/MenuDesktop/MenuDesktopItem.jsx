@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { RiArrowDownSLine, RiArrowRightSLine } from 'react-icons/ri';
+import { Link } from 'react-scroll';
 import Dropdown from './Dropdown';
 import PropTypes from 'prop-types';
 
@@ -48,9 +49,17 @@ const MenuDesktopItem = ({ items, depthLevel }) => {
                 </>
             ) : (
                 <>
-                    <a href="#" className="block text-left">
+                    <Link
+                        activeClass="active"
+                        to={items.path}
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration={500}
+                        className="block text-left"
+                    >
                         {items.title}
-                    </a>
+                    </Link>
                 </>
             )}
         </li>

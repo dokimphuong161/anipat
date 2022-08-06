@@ -6,9 +6,9 @@ import { ABOUT_DATA } from '~/constants/aboutData';
 
 const About = () => {
     return (
-        <section className="about">
-            <div className="container mx-auto grid md:grid-cols-2 md:gap-8 grid-cols-1 md:px-0 px-4">
-                <div className="flex items-center md:mt-0 mt-12">
+        <section className="about md:mt-20 mt-10" id="about">
+            <div className="container mx-auto grid md:grid-cols-2 md:gap-8 grid-cols-1 md:px-0 px-6">
+                <div className="flex items-center md:mt-0 mt-4">
                     <img src={AboutImg} />
                 </div>
                 <div className="md:mt-0 mt-10">

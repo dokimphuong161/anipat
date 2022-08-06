@@ -24,7 +24,7 @@ const Company = () => {
         ],
     };
     return (
-        <section className="company mb-14 mt-14">
+        <section className="company mb-20 mt-20">
             <div className="container mx-auto">
                 <p className="flex justify-center mb-8 text-orange-500 uppercase text-[14px] font-bold">
                     <span className="mr-1">

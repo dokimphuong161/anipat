@@ -36,9 +36,9 @@ const Banner = () => {
     //Render Desc Item
     const renderDesSliderItem = BANNER_DESC_SLIDER.map((item) => <DescSliderItem item={item} key={item.id} />);
     return (
-        <section className="banner md:pt-32 pt-28" style={backgroundImg}>
+        <section className="banner md:pt-32 pt-28" style={backgroundImg} id="home">
             <div className="container mx-auto flex items-center justify-between">
-                <div className="banner-content md:w-2/5 md:px-0 w-full px-4">
+                <div className="banner-content md:w-2/5 md:px-0 w-full px-6">
                     <h3 className="md:text-[75px] md:leading-[85px] text-[60px] leading-[75px] font-black">
                         <span className="text-primary-900">Taking care</span> <br />
                         of your pets <br />

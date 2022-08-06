@@ -11,7 +11,7 @@ import { FOOTER_LINKS } from '~/constants/footerData';
 const Footer = () => {
     const date = new Date();
     return (
-        <footer className="border-t border-dashed md:pt-20 pt-8 md:px-0 px-4">
+        <footer className="border-t border-dashed md:pt-20 pt-8 md:px-0 px-6">
             <div className="container mx-auto">
                 <div className="grid md:grid-cols-4 grid-cols-1 pb-10">
                     <div className="footer-info md:pr-10 pr-0 md:mb-0 mb-4 flex flex-col md:items-start items-center">

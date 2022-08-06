@@ -15,3 +15,11 @@
 .testimonial-slide .slick-dots li.slick-active button:before {
     color: #ed6436;
 }
+
+.blog-list .slick-slider {
+    margin: 0 -15px;
+}
+
+.blog-list .slick-slide {
+    padding: 15px;
+}
