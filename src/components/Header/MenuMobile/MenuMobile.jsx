@@ -1,21 +1,36 @@
-import { MENU_ITEMS } from '~/constants/menuItems';
 import { MdClose, MdPhoneInTalk } from 'react-icons/md';
-import MenuMobileItem from './MenuMobileItem';
-import Button from '~/components/Button';
+import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
+// data
+import { menuItems } from '~/data/initData';
+
+// components
+import MenuMobileItem from './MenuMobileItem';
+import Button from '~/components/Button';
+
 const MenuMobile = ({ open, onClose }) => {
+    // Get menu items data
+    const [menus, setMenus] = useState([]);
+    useEffect(() => {
+        if (!!menuItems) {
+            setMenus(menuItems);
+        } else {
+            console.log('Data is empty');
+        }
+    }, []);
+
     return (
         <>
             <div className={`overlay md:hidden ${open ? 'block' : 'hidden'}`}></div>
             <div
-                className={`z-50 md:hidden bg-white fixed w-3/4 h-full top-0 py-20 pl-5 duration-500 ${
+                className={`z-50 fixed top-0 py-16 pl-6 bg-white w-3/4 h-full md:hidden duration-500 ${
                     open ? 'right-0' : 'right-[-100%]'
                 }`}
             >
                 <MdClose onClick={onClose} className="absolute top-4 right-4 text-3xl" />
                 <nav>
-                    {MENU_ITEMS.map((menu, index) => (
+                    {menus.map((menu, index) => (
                         <MenuMobileItem items={menu} key={index} />
                     ))}
                 </nav>
@@ -40,6 +55,11 @@ const MenuMobile = ({ open, onClose }) => {
 MenuMobile.propTypes = {
     open: PropTypes.bool.isRequired,
     onClose: PropTypes.func.isRequired,
+};
+
+MenuMobile.defaultProps = {
+    open: false,
+    onClose: null,
 };
 
 export default MenuMobile;

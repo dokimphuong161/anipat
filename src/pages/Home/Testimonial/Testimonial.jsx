@@ -1,23 +1,38 @@
+import Slider from 'react-slick';
+import { useRef } from 'react';
 import { FaDog } from 'react-icons/fa';
 import { FiPlay } from 'react-icons/fi';
-import TestimonialImg from '~/assets/images/testimonial.png';
-import Button from '~/components/Button';
-import { TESTIMONIALS_DATA } from '~/constants/testimonialData';
-import TestimonialItem from './TestimonialItem';
-import Slider from 'react-slick';
-import Modal from '~/components/Modal';
-import { useRef } from 'react';
-import { ModalContent } from '~/components/Modal/Modal';
 
+// images
+import { images } from '~/constants/images';
+
+// hooks
+import useGetData from '~/hooks/useGetData';
+
+// components
+import Button from '~/components/Button';
+import Modal from '~/components/Modal';
+import { ModalContent } from '~/components/Modal/Modal';
+import TestimonialItem from './TestimonialItem';
+
+const TestiBg = {
+    backgroundImage: `url("${images.IMG_TESTIMONIAL_BG}")`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+};
 const Testimonial = () => {
+    // Get testimonial data
+    const { data } = useGetData('testimonialsData');
     const settings = {
         dots: true,
         infinite: true,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
+        arrows: false,
     };
-    const renderTestimonialItem = TESTIMONIALS_DATA.map((item, index) => <TestimonialItem item={item} key={index} />);
+    const renderTestimonialItem = data.map((item, index) => <TestimonialItem item={item} key={index} />);
 
     // Active Modal
     const setModalActive = async () => {
@@ -26,7 +41,11 @@ const Testimonial = () => {
         modal.classList.toggle('active');
     };
     return (
-        <section className="testimonial mt-4">
+        <section
+            id="testimonials"
+            className="testimonial relative pt-28 pb-28 before:content[''] before:absolute before:bg-cloud before:-top-2 before:left-0 before:right-0 before:h-[58px] after:content[''] after:absolute after:rotate-180 after:bg-cloud after:-bottom-2 after:left-0 after:right-0 after:h-[58px]"
+            style={TestiBg}
+        >
             <div className="container mx-auto grid md:grid-cols-2 md:gap-8 grid-cols-1 md:px-0 px-6">
                 <div className="">
                     <div className="flex flex-col md:items-start items-center md:text-left text-center">
@@ -38,7 +57,7 @@ const Testimonial = () => {
                         </p>
                         <h1 className="heading">Review from our customers</h1>
                     </div>
-                    <div className="testimonial-slide">
+                    <div className="testimonial-slide mt-6">
                         <Slider {...settings}>{renderTestimonialItem}</Slider>
                     </div>
                 </div>
@@ -52,7 +71,7 @@ const Testimonial = () => {
                             <FiPlay className="text-2xl" />
                         </Button>
                     </div>
-                    <img src={TestimonialImg} />
+                    <img src={images.IMG_TESTIMONIAL} />
                 </div>
                 <VideoIntroModal />
             </div>

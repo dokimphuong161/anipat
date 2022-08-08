@@ -1,15 +1,13 @@
-import emailjs from '@emailjs/browser';
-import { useRef } from 'react';
 import { FaDog } from 'react-icons/fa';
-import FormBg from '~/assets/images/bg-form.png';
-import FancyCat from '~/assets/images/fancy-image-cat.png';
-import FancyText from '~/assets/images/fancy-image-text.png';
-import FancyToy from '~/assets/images/fancy-toy.png';
-import FancyBird from '~/assets/images/fancy-toy2.png';
+
+// images
+import { images } from '~/constants/images';
+
+// components
 import BookingForm from './BookingForm';
 
 const formBg = {
-    backgroundImage: `url("${FormBg}")`,
+    backgroundImage: `url("${images.IMG_BOOKING_FORM_BG}")`,
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
@@ -17,20 +15,26 @@ const formBg = {
 
 const Booking = () => {
     return (
-        <section className="activitive md:mt-20 mt-10" id="activitive">
+        <section className="relative md:mt-20 mt-10" id="booking">
+            <div className="absolute left-20 md:-top-10 -top-20 -z-10">
+                <img src={images.IMG_SHAPE_CAT} className="w-32" />
+            </div>
+            <div className="absolute md:block hidden right-4 bottom-10 -z-10">
+                <img src={images.IMG_SHAPE_DOG} className="w-32" />
+            </div>
             <div className="container mx-auto grid md:grid-cols-2 md:gap-8 grid-cols-1 md:px-0 px-6 ">
-                <div className="flex items-center md:mt-0 md:mb-0 mt-32 mb-28 relative w-[120%] -ml-[120px]">
+                <div className="flex items-center md:mt-0 md:mb-0 mt-32 mb-28 relative md:w-[120%] md:-ml-[120px] w-full ml-0">
                     <div className="absolute z-1 rounded-br-3xl">
-                        <img src={FancyCat} className="rounded-br-[40px]" />
+                        <img src={images.IMG_BOOKING1} className="rounded-br-[40px]" />
                     </div>
                     <div className="absolute z-2">
-                        <img src={FancyText} />
+                        <img src={images.IMG_BOOKING2} />
                     </div>
                     <div className="absolute z-3">
-                        <img src={FancyToy} />
+                        <img src={images.IMG_BOOKING3} />
                     </div>
                     <div className="absolute z-4">
-                        <img src={FancyBird} />
+                        <img src={images.IMG_BOOKING4} />
                     </div>
                 </div>
                 <div className="md:mt-0 mt-20">

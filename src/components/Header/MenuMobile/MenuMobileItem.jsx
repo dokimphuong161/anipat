@@ -1,7 +1,7 @@
 import { useState } from 'react';
+import { Link } from 'react-scroll';
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 import PropTypes from 'prop-types';
-import { Link } from 'react-scroll';
 
 const MenuMobileItem = ({ items }) => {
     const [openItem, setOpenItem] = useState(false);
@@ -9,19 +9,16 @@ const MenuMobileItem = ({ items }) => {
         setOpenItem((prev) => !prev);
     };
     return (
-        <div className="py-1 ">
+        <div className="py-1">
             {items.children ? (
                 <>
-                    <div
-                        className="sidebar-title flex items-center hover:text-primary-800 font-semibold"
-                        onClick={handleToggleItem}
-                    >
+                    <div className="flex items-center hover:text-primary-800 font-semibold" onClick={handleToggleItem}>
                         <span>{items.title}</span>
                         <MdOutlineKeyboardArrowDown
                             className={`transition ml-4 duration-300  ${openItem ? 'rotate-180' : ''}`}
                         />
                     </div>
-                    <div className={`sidebar-content px-6 h-0 overflow-hidden ${openItem ? 'h-auto pt-1 ' : ''}`}>
+                    <div className={`px-6 h-0 overflow-hidden ${openItem ? 'h-auto pt-1 ' : ''}`}>
                         {items.children.map((submenu, index) => (
                             <MenuMobileItem items={submenu} key={index} />
                         ))}
@@ -50,4 +47,7 @@ MenuMobileItem.propTypes = {
     items: PropTypes.object.isRequired,
 };
 
+MenuMobileItem.defaultProps = {
+    items: null,
+};
 export default MenuMobileItem;

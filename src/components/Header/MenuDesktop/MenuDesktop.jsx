@@ -1,14 +1,28 @@
+import { useEffect, useState } from 'react';
 import { MdPhoneInTalk } from 'react-icons/md';
-import Button from '~/components/Button';
-import { MENU_ITEMS } from '~/constants/menuItems';
+
+// data
+import { menuItems } from '~/data/initData';
+
+//  components
 import MenuDesktopItem from './MenuDesktopItem';
+import Button from '~/components/Button';
 
 const MenuDesktop = () => {
+    // Get menu items data
+    const [menus, setMenus] = useState([]);
+    useEffect(() => {
+        if (!!menuItems) {
+            setMenus(menuItems);
+        } else {
+            console.log('Not data');
+        }
+    }, []);
     return (
         <div className="md:flex justify-between items-center hidden ml-8 flex-1">
             <nav>
                 <ul className="flex menus">
-                    {MENU_ITEMS.map((menu, index) => {
+                    {menus.map((menu, index) => {
                         const depthLevel = 0;
                         return <MenuDesktopItem items={menu} key={index} depthLevel={depthLevel} />;
                     })}

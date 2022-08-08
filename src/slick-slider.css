@@ -3,6 +3,10 @@
     text-align: left;
 }
 
+.testimonial-slide .slick-dots {
+    margin-left: 15px;
+}
+
 .banner-desc .slick-dots li button:before {
     top: 25px;
     font-size: 10px;

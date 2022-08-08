@@ -1,15 +1,16 @@
 import { useEffect, useRef, useState } from 'react';
 import { RiArrowDownSLine, RiArrowRightSLine } from 'react-icons/ri';
 import { Link } from 'react-scroll';
-import Dropdown from './Dropdown';
 import PropTypes from 'prop-types';
+
+// components
+import Dropdown from './Dropdown';
 
 const MenuDesktopItem = ({ items, depthLevel }) => {
     const [dropdown, setDropdown] = useState(false);
 
     // Close dropdown
     const ref = useRef();
-
     useEffect(() => {
         const handler = (event) => {
             if (dropdown && ref.current && !ref.current.contains(event.target)) {
@@ -43,7 +44,11 @@ const MenuDesktopItem = ({ items, depthLevel }) => {
                     >
                         {items.title}
                         {''}
-                        {depthLevel > 0 ? <RiArrowRightSLine /> : <RiArrowDownSLine />}
+                        {depthLevel > 0 ? (
+                            <RiArrowRightSLine className="ml-1" />
+                        ) : (
+                            <RiArrowDownSLine className="ml-1" />
+                        )}
                     </button>
                     <Dropdown dropdown={dropdown} submenus={items.children} depthLevel={depthLevel} />
                 </>
@@ -56,7 +61,7 @@ const MenuDesktopItem = ({ items, depthLevel }) => {
                         smooth={true}
                         offset={-70}
                         duration={500}
-                        className="block text-left"
+                        className="block text-left hover:cursor-pointer"
                     >
                         {items.title}
                     </Link>
@@ -69,6 +74,11 @@ const MenuDesktopItem = ({ items, depthLevel }) => {
 MenuDesktopItem.propTypes = {
     items: PropTypes.object.isRequired,
     depthLevel: PropTypes.number.isRequired,
+};
+
+MenuDesktopItem.defaultProps = {
+    items: null,
+    depthLevel: 0,
 };
 
 export default MenuDesktopItem;

@@ -1,11 +1,14 @@
-import React from 'react';
-import Slider from 'react-slick';
-import { BRANDS } from '~/constants/brands';
 import { FaDog } from 'react-icons/fa';
+import Slider from 'react-slick';
+
+// hooks
+import useGetData from '~/hooks/useGetData';
 
 const Company = () => {
-    // Setting slick slider
+    // Get brands data
+    const { data } = useGetData('brandsData');
 
+    // Setting slick slider
     var settings = {
         infinite: false,
         speed: 500,
@@ -24,7 +27,7 @@ const Company = () => {
         ],
     };
     return (
-        <section className="company mb-20 mt-20">
+        <section className="company mt-10 mb-10">
             <div className="container mx-auto">
                 <p className="flex justify-center mb-8 text-orange-500 uppercase text-[14px] font-bold">
                     <span className="mr-1">
@@ -34,9 +37,9 @@ const Company = () => {
                 </p>
                 <div className="company-list">
                     <Slider {...settings}>
-                        {BRANDS.map((brand, i) => (
+                        {data.map((brand, i) => (
                             <div className="company-item">
-                                <img src={brand} key={i} className="md:h-[70px] h-[60px]  mx-auto" />
+                                <img src={brand} key={i} className="md:h-[70px] h-[65px]  mx-auto" />
                             </div>
                         ))}
                     </Slider>

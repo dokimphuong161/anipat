@@ -112,7 +112,7 @@
 
     /* Nested menu */
     .dropdown {
-        @apply absolute right-0 left-0 shadow-md text-sm z-10 min-w-10 py-2 bg-white hidden;
+        @apply absolute right-0 left-0 shadow-lg text-sm z-10 w-[200px] border border-dashed border-primary-300 rounded-md py-2  bg-white hidden;
     }
 
     .menus > .menu-items button,
@@ -146,6 +146,9 @@
     }
 
     /* Service */
+    /* .services::before {
+        @apply content-[''] bg-wave top-0 left-0 z-50;
+    } */
     .service-icon {
         @apply h-[150px] w-[150px] text-[70px] text-center leading-[150px] duration-300 inline-block absolute top-0 -mt-[75px] -ml-[75px] left-1/2 rounded-drag border-8 border-white;
     }
@@ -192,12 +195,20 @@
         text-overflow: ellipsis;
         display: -webkit-box;
         -webkit-box-orient: vertical;
-        -webkit-line-clamp: 3;
+        -webkit-line-clamp: 2;
         line-height: 1.8em;
-        max-height: 5.4em;
+        max-height: 3.6em;
         line-height: 1.6em;
         padding-right: 0;
         padding-left: 0;
+    }
+
+    .rating-start:not(:first-child) {
+        @apply ml-1;
+    }
+    /* Gallery */
+    .gallery img {
+        @apply rounded-2xl;
     }
     /* Booking */
     .input-field:not(:first-child) {

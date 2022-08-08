@@ -1,18 +1,22 @@
 import { useEffect, useRef, useState } from 'react';
 import { BiMenuAltRight } from 'react-icons/bi';
-import Pawsitive from '~/assets/images/pawsitive.png';
+
+// components
 import MenuDesktop from './MenuDesktop/MenuDesktop';
 import MenuMobile from './MenuMobile/MenuMobile';
-const Header = () => {
-    //Toggle menu
-    const [openMenu, setOpenMenu] = useState(false);
 
+// constants
+import { images } from '~/constants/images';
+
+const Header = () => {
+    // Handle to open menu mobile
+    const [openMenu, setOpenMenu] = useState(false);
     const handleMenuMobile = () => {
         setOpenMenu((prev) => !prev);
     };
 
-    //Menu effect when scroll
-    const headerRef = useRef();
+    //Handle header fade when scroll down/scroll up
+    const headerRef = useRef(null);
     useEffect(() => {
         const fixedHeader = () => {
             if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
@@ -34,19 +38,19 @@ const Header = () => {
     return (
         <header
             ref={headerRef}
-            className="z-50 md:bg-transparent bg-white md:shadow-none shadow-sm fixed md:py-0 py-3 w-full"
+            className="fixed z-50 bg-white shadow-sm w-full md:bg-transparent md:shadow-none md:py-0 py-3"
         >
             <div className="container mx-auto flex items-center">
-                <div className="md:w-auto w-full flex justify-between items-center px-6 md:px-0">
-                    <img src={Pawsitive} className="md:w-40 w-32" />
+                <div className="flex justify-between items-center md:w-auto w-full md:px-0 px-6 ">
+                    <img alt="No image" src={images.IMG_LOGO} className="md:w-40 w-32" />
                     <div className="md:hidden block" onClick={handleMenuMobile}>
                         <BiMenuAltRight className="text-3xl" />
                     </div>
                 </div>
-                {/* Menu Desktop */}
+                {/* Menu for desktop */}
                 <MenuDesktop />
 
-                {/* Menu Mobile */}
+                {/* Menu for mobile */}
                 <MenuMobile open={openMenu} onClose={handleMenuMobile} />
             </div>
         </header>

@@ -1,8 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { MdPets } from 'react-icons/md';
 import { FiUser, FiFolder } from 'react-icons/fi';
 import { FaRegCommentDots } from 'react-icons/fa';
+import PropTypes from 'prop-types';
+
+// components
 import Button from '~/components/Button';
 
 const BlogItem = ({ item }) => {
@@ -54,6 +56,10 @@ const BlogItem = ({ item }) => {
 
 BlogItem.propTypes = {
     item: PropTypes.object.isRequired,
+};
+
+BlogItem.defaultProps = {
+    item: null,
 };
 
 export default BlogItem;

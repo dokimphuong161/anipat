@@ -84,6 +84,10 @@ module.exports = {
                 'fade-up': 'cubic-bezier(0,1,0,1)',
                 'fade-down': 'cubic-bezier(1,0,1,0)',
             },
+            backgroundImage: {
+                wave: "url('assets/images/shape/shape_wave.webp')",
+                cloud: "url('assets/images/shape/shape_cloud.webp')",
+            },
         },
     },
     variants: {

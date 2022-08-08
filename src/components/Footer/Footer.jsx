@@ -1,21 +1,37 @@
+import { useEffect, useState } from 'react';
 import { AiOutlineInstagram, AiOutlineTwitter } from 'react-icons/ai';
 import { BsFacebook, BsPhoneVibrate, BsPinterest } from 'react-icons/bs';
 import { MdOutlinePhoneInTalk } from 'react-icons/md';
 import { TbMailForward } from 'react-icons/tb';
-import AppStore from '~/assets/images/App-Store.jpg';
-import GooglePlay from '~/assets/images/Google-Play.jpg';
-import Logo from '~/assets/images/pawsitive.png';
-import Payment from '~/assets/images/payment.png';
-import { FOOTER_LINKS } from '~/constants/footerData';
+
+// images
+import { images } from '~/constants/images';
+
+// data
+import { footerLinks } from '~/data/initData';
 
 const Footer = () => {
+    const [footerLink, setFooterLink] = useState([]);
+    useEffect(() => {
+        if (!!footerLinks) {
+            setFooterLink(footerLinks);
+        } else {
+            console.log('Data is empty');
+        }
+    }, []);
     const date = new Date();
     return (
-        <footer className="border-t border-dashed md:pt-20 pt-8 md:px-0 px-6">
+        <footer className="border-t border-dashed md:pt-20 pt-8 md:px-0 px-6 relative">
+            <div className="absolute -bottom-8 left-0 -z-10 md:block hidden">
+                <img src={images.IMG_SHAPE_DOG1} className="w-32" />
+            </div>
+            <div className="absolute md:block hidden right-0 bottom-0 -z-10 md:block hidden">
+                <img src={images.IMG_SHAPE_DOG2} className="w-24" />
+            </div>
             <div className="container mx-auto">
                 <div className="grid md:grid-cols-4 grid-cols-1 pb-10">
                     <div className="footer-info md:pr-10 pr-0 md:mb-0 mb-4 flex flex-col md:items-start items-center">
-                        <img src={Logo} className="w-36" />
+                        <img src={images.IMG_LOGO} className="w-36" />
                         <p className="text-[14px] leading-[24px] mt-4 text-gray-600 md:text-left text-center">
                             We are committed to providing the highest-quality products that you can trust.
                         </p>
@@ -50,7 +66,7 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div className="grid col-span-2 grid-cols-3">
-                        {FOOTER_LINKS.map((item, index) => (
+                        {footerLink.map((item, index) => (
                             <div key={index} className="md:mt-0 mt-4 md:text-left text-center">
                                 <h3 className="uppercase text-[14px] font-bold">{item.heading}</h3>
                                 <ul className="mt-4">
@@ -88,17 +104,17 @@ const Footer = () => {
                             <p className="ml-3 font-bold text-[14px]">Download Our App</p>
                         </div>
                         <div className="flex mt-4">
-                            <img src={AppStore} />
-                            <img src={GooglePlay} className="ml-2" />
+                            <img src={images.IMG_APP_STORE} />
+                            <img src={images.IMG_GOOGLE_PLAY} className="ml-2" />
                         </div>
                     </div>
                 </div>
-                <div className="flex md:flex-row flex-col items-center justify-between md:py-6 py-4 border-t border-dashed">
-                    <p className="text-[12px]">
+                <div className="flex md:flex-row flex-col items-center justify-between md:py-6 py-4 md:px-8 px-0 border-t border-dashed">
+                    <p className="text-[12px] md:text-left text-center">
                         Copyright © {date.getFullYear()} Pawsitive. Redesign by{' '}
                         <span className="text-primary-900">Do Kim Phuong.</span> All rights reserved.
                     </p>
-                    <img className="md:mt-0 mt-4 w-auto md:h-auto h-5" src={Payment} />
+                    <img className="md:mt-0 mt-4 w-auto md:h-auto h-5" src={images.IMG_PAYMENT} />
                 </div>
             </div>
         </footer>

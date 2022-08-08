@@ -1,11 +1,15 @@
-import PropTypes from 'prop-types';
-import ItemBg from '~/assets/images/about_bg_shape.png';
 import { BsCheck2 } from 'react-icons/bs';
 import { MdClose } from 'react-icons/md';
+import PropTypes from 'prop-types';
+
+// images
+import { images } from '~/constants/images';
+
+// components
 import Button from '~/components/Button';
 
 const backgroundImg = {
-    backgroundImage: `url("${ItemBg}")`,
+    backgroundImage: `url("${images.IMG_PRICING_ITEM_BG}")`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
@@ -53,6 +57,10 @@ const PricingItem = ({ item }) => {
 
 PricingItem.propTypes = {
     item: PropTypes.object.isRequired,
+};
+
+PricingItem.defaultProps = {
+    item: null,
 };
 
 export default PricingItem;

@@ -1,12 +1,15 @@
 import About from './About';
-import Banner from './Banner';
-import Company from './Company';
-import Services from './Services';
-import Blog from './Blog';
-import Testimonial from './Testimonial';
-import Pricing from './Pricing';
 import Activitive from './Activitive';
+import Banner from './Banner';
+import Blog from './Blog';
 import Booking from './Booking';
+import Company from './Company';
+import Contact from './Contact';
+import Gallery from './Gallery';
+
+import Pricing from './Pricing';
+import Services from './Services';
+import Testimonial from './Testimonial';
 
 const Home = () => {
     return (
@@ -19,7 +22,9 @@ const Home = () => {
             <Activitive />
             <Blog />
             <Booking />
+            <Gallery />
             <Company />
+            <Contact />
         </>
     );
 };

@@ -1,22 +1,24 @@
-// Import Image
-import BannerImg from '~/assets/images/banner.jpg';
-import DogBanner from '~/assets/images/dogs/dog-banner-1.png';
-import BookNowBtn from '~/assets/images/book-now-btn.png';
-
-// Import Slick Slider
+// slick slider
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 
-// Import required modules
-import { BANNER_DESC_SLIDER } from '~/constants/bannerDescSlider';
+// images
+import { images } from '~/constants/images';
+
+// icons
 import { ArrowIcon } from '~/constants/svgIcons';
-import DescSliderItem from './DescSliderItem';
+
+// hooks
+import useGetData from '~/hooks/useGetData';
+
+// components
 import BannerRating from './BannerRating';
+import DescSliderItem from './DescSliderItem';
 
 // Setting background
 const backgroundImg = {
-    backgroundImage: `url("${BannerImg}")`,
+    backgroundImage: `url("${images.IMG_BANNER_BG}")`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
@@ -33,8 +35,12 @@ const Banner = () => {
         slidesToShow: 1,
         slidesToScroll: 1,
     };
+
+    // Get banner slider data
+    const { data } = useGetData('bannerSlider');
+
     //Render Desc Item
-    const renderDesSliderItem = BANNER_DESC_SLIDER.map((item) => <DescSliderItem item={item} key={item.id} />);
+    const renderDesSliderItem = data.map((item) => <DescSliderItem item={item} key={item.id} />);
     return (
         <section className="banner md:pt-32 pt-28" style={backgroundImg} id="home">
             <div className="container mx-auto flex items-center justify-between">
@@ -48,7 +54,11 @@ const Banner = () => {
                     </div>
                     <div className="banner-button mt-16 flex relative md:w-4/5 w-3/4">
                         <a href="#">
-                            <img src={BookNowBtn} className="hover:rotate-12 transition duration-500 md:w-auto w-48" />
+                            <img
+                                alt="No image"
+                                src={images.IMG_BOOK_BTN}
+                                className="hover:rotate-12 transition duration-500 md:w-auto w-48"
+                            />
                         </a>
                         <ArrowIcon className="w-20 absolute -top-8 animate-wiggle md:right-0 -right-4" />
                     </div>
@@ -56,7 +66,7 @@ const Banner = () => {
             </div>
 
             <div className="banner-img relavive md:block hidden">
-                <img className=" absolute top-0 right-0 md:w-[55%] " src={DogBanner}></img>
+                <img alt="No image" src={images.IMG_BANNER} className=" absolute top-0 right-0 md:w-[55%] "></img>
                 <BannerRating />
             </div>
         </section>

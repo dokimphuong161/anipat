@@ -1,6 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
+
+// components
 import MenuDesktopItem from './MenuDesktopItem';
 
 const Dropdown = ({ submenus, dropdown, depthLevel }) => {
@@ -15,6 +17,16 @@ const Dropdown = ({ submenus, dropdown, depthLevel }) => {
     );
 };
 
-Dropdown.propTypes = {};
+Dropdown.propTypes = {
+    submenus: PropTypes.array.isRequired,
+    dropdown: PropTypes.bool,
+    depthLevel: PropTypes.number,
+};
+
+Dropdown.defaultProps = {
+    submenus: null,
+    dropdown: false,
+    depthLevel: 0,
+};
 
 export default Dropdown;

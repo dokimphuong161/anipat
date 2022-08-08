@@ -1,33 +1,45 @@
-import AboutImg from '~/assets/images/about1.png';
-import { FaDog } from 'react-icons/fa';
+// hooks
+import useGetData from '~/hooks/useGetData';
+
+// images
+import { images } from '~/constants/images';
+
+// components
 import Accordion from '~/components/Accordion';
 import Button from '~/components/Button';
-import { ABOUT_DATA } from '~/constants/aboutData';
+import Heading from '~/components/Heading';
+
+const AboutBg = {
+    backgroundImage: `url("${images.IMG_ABOUT_BG}")`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+};
 
 const About = () => {
+    // Get about data
+    const { data } = useGetData('aboutData');
     return (
-        <section className="about md:mt-20 mt-10" id="about">
+        <section
+            className="about md:pt-24 pt-14 pb-12 relative before:content[''] before:absolute before:bg-wave before:top-0 before:left-0 before:right-0 before:h-[24px]"
+            id="about"
+            style={AboutBg}
+        >
             <div className="container mx-auto grid md:grid-cols-2 md:gap-8 grid-cols-1 md:px-0 px-6">
                 <div className="flex items-center md:mt-0 mt-4">
-                    <img src={AboutImg} />
+                    <img src={images.IMG_ABOUT} />
                 </div>
                 <div className="md:mt-0 mt-10">
-                    <div className="flex flex-col md:items-start items-center md:text-left text-center">
-                        <p className="flex text-orange-500 uppercase text-[14px] font-bold">
-                            <span className="mr-1">
-                                <FaDog />
-                            </span>{' '}
-                            About pawsitive
-                        </p>
-                        <h1 className="heading">We keep them happy</h1>
-                        <p className="text-gray-500 mt-6">
-                            Our staff spends time interacting with and monitoring the pets to ensure their safety and
-                            happiness while they are with us.
-                        </p>
-                    </div>
-
+                    <Heading
+                        className="md:text-left text-center"
+                        title={'About pawsitive'}
+                        heading={'We keep them happy'}
+                        description={
+                            'Our staff spends time interacting with and monitoring the pets to ensure their safety and happiness while they are with us'
+                        }
+                    />
                     <div className="my-6">
-                        <Accordion items={ABOUT_DATA} />
+                        <Accordion items={data} />
                     </div>
 
                     <Button primary shape>

@@ -7,7 +7,6 @@ const Accordion = ({ items }) => {
     const [active, setActive] = useState(true);
     const [selected, setSelected] = useState(null);
     const itemActive = items[0];
-    console.log(itemActive);
 
     const toggleAccordion = (index) => {
         if (selected === index) {
@@ -21,9 +20,9 @@ const Accordion = ({ items }) => {
         <div className="accordion">
             {items.map((item, index) => (
                 <div
-                    className={`accordion-item py-3 px-5 border rounded-xl transition-all duration-500 hover:bg-gray-100 hover:border-transparent ${
+                    className={`accordion-item border border-transparent py-3 px-5 rounded-xl transition-all duration-500 bg-white hover:bg-white hover:border-dashed hover:border-primary-900 ${
                         selected === index || (active && item.id === itemActive.id)
-                            ? 'bg-gray-100 border-transparent'
+                            ? 'border border-primary-900 border-dashed'
                             : ''
                     }`}
                 >
