@@ -9,7 +9,7 @@ import Button from '~/components/Button';
 
 const BlogItem = ({ item }) => {
     return (
-        <div className="hover:scale-105 transition duration-300 border-transparent p-4 rounded-3xl shadow-md">
+        <div className="hover:scale-105 bg-white transition duration-300 border-transparent p-4 rounded-3xl shadow-md">
             <div className="blog-img relative">
                 <img src={item.image} className="rounded-2xl" />
                 <div

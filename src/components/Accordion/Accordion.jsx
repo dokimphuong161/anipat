@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { HiOutlinePlusSm } from 'react-icons/hi';
-import { GrFormSubtract } from 'react-icons/gr';
+import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
 
 const Accordion = ({ items }) => {
     const [active, setActive] = useState(true);
     const [selected, setSelected] = useState(null);
     const itemActive = items[0];
-
     const toggleAccordion = (index) => {
         if (selected === index) {
             return setSelected(null);
@@ -34,11 +32,17 @@ const Accordion = ({ items }) => {
                             <img src={item.icon} className="w-9 mr-4" />
                             <p className="uppercase text-[14px] font-bold">{item.title}</p>
                         </div>
-                        <span className="border p-2 rounded-full">
+                        <span
+                            className={`p-3 text-[18px] rounded-shape font-bold bg-gray-100 ${
+                                selected === index || (active && item.id === itemActive.id)
+                                    ? 'bg-primary-600'
+                                    : 'text-primary-900'
+                            }`}
+                        >
                             {selected === index || (active && item.id === itemActive.id) ? (
-                                <GrFormSubtract />
+                                <AiOutlineMinus className="text-white" />
                             ) : (
-                                <HiOutlinePlusSm />
+                                <AiOutlinePlus />
                             )}
                         </span>
                     </div>

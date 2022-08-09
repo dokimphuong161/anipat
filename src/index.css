@@ -21,6 +21,9 @@
     input {
         @apply outline-none;
     }
+    input[type='date'] {
+        @apply text-gray-700;
+    }
     select {
         padding: 17px 30px;
         width: 100%;

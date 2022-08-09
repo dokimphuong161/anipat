@@ -79,6 +79,7 @@ module.exports = {
             },
             borderRadius: {
                 drag: '68% 32% 27% 73% / 60% 62% 38% 40%',
+                shape: '47% 53% 61% 39% / 38% 38% 62% 62%',
             },
             transitionTimingFunction: {
                 'fade-up': 'cubic-bezier(0,1,0,1)',
@@ -87,6 +88,7 @@ module.exports = {
             backgroundImage: {
                 wave: "url('assets/images/shape/shape_wave.webp')",
                 cloud: "url('assets/images/shape/shape_cloud.webp')",
+                line: "url('assets/images/shape/shape_line.webp')",
             },
         },
     },

@@ -21,11 +21,11 @@ const Gallery = () => {
                         <span className="mr-1">
                             <FaDog />
                         </span>{' '}
-                        Blog posts
+                        Our gallery
                     </p>
-                    <h1 className="heading">Enjoy Our Story</h1>
+                    <h1 className="heading">Looking & Smelling</h1>
                 </div>
-                <div className="grid md:grid-cols-4 grid-cols-2 md:gap-5 gap-4 md:-mt-20 mt-6">
+                <div className="grid md:grid-cols-4 grid-cols-2 md:gap-5 gap-4 md:-mt-16 mt-6">
                     <div className="grid-rows-2 md:mt-44 mt-0">
                         <img src={images.IMG_GALLERY1} />
                         <img className="md:mt-5 mt-4" src={images.IMG_GALLERY5} />

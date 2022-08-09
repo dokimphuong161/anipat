@@ -21,7 +21,7 @@ const About = () => {
     const { data } = useGetData('aboutData');
     return (
         <section
-            className="about md:pt-24 pt-14 pb-12 relative before:content[''] before:absolute before:bg-wave before:top-0 before:left-0 before:right-0 before:h-[24px]"
+            className="about md:pt-24 pt-14 pb-12 mt-8 relative before:content[''] before:absolute before:bg-wave before:top-0 before:left-0 before:right-0 before:h-[24px]"
             id="about"
             style={AboutBg}
         >

@@ -15,8 +15,11 @@ const formBg = {
 
 const Booking = () => {
     return (
-        <section className="relative md:mt-20 mt-10" id="booking">
-            <div className="absolute left-20 md:-top-10 -top-20 -z-10">
+        <section
+            className="relative md:mt-20 mt-10 before:content[''] before:-z-30 before:absolute before:bg-line before:bg-no-repeat before:rotate-[45deg] before:top-10 before:left-0 before:right-0 before:h-full"
+            id="booking"
+        >
+            <div className="absolute left-20 -bottom-12 -z-10">
                 <img src={images.IMG_SHAPE_CAT} className="w-32" />
             </div>
             <div className="absolute md:block hidden right-4 bottom-10 -z-10">
@@ -38,7 +41,10 @@ const Booking = () => {
                     </div>
                 </div>
                 <div className="md:mt-0 mt-20">
-                    <div className="form py-10 md:px-12 px-10 rounded-2xl shadow-sm" style={formBg}>
+                    <div
+                        className="form py-10 md:px-12 px-10 rounded-2xl shadow-large border border-dashed border-primary-300"
+                        style={formBg}
+                    >
                         <p className="flex justify-center text-orange-500 uppercase text-[14px] font-bold">
                             <span className="mr-1">
                                 <FaDog />

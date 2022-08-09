@@ -34,8 +34,8 @@ const Activitive = () => {
                         </p>
                         <h1 className="heading">Our activities and experience</h1>
                         <p className="text-gray-500 mt-6">
-                            No it except well out nice refute. Downstairs turned but a would passion the a this in be
-                            stupid attention it his managers perfecting
+                            Group social time gives your dog an opportunity to run, play, socialize and interact with
+                            other dogs.
                         </p>
                     </div>
 

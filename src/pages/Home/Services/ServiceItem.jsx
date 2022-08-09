@@ -27,7 +27,7 @@ const ServiceItem = ({ item }) => {
             <h3 className="text-2xl font-bold">{item.title}</h3>
             <p className="mt-4 mb-5">{item.description}</p>
             <Button shape primary small>
-                View More
+                View more
             </Button>
         </div>
     );

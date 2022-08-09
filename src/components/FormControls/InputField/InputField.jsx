@@ -15,7 +15,7 @@ const InputField = (props) => {
                 control={form.control}
                 render={({ field: { onChange, onBlur, value, name } }) => (
                     <input
-                        className="input-field bg-pink-50 w-full py-4 px-7 rounded-full text-gray-500"
+                        className="input-field bg-pink-50 w-full py-3 px-7 shadow-inner rounded-full placeholder:text-gray-500 placeholder:font-medium"
                         name={name}
                         onChange={onChange}
                         onBlur={onBlur}
