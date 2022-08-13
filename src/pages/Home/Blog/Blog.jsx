@@ -31,6 +31,14 @@ const Blog = () => {
                     infinite: true,
                 },
             },
+            {
+                breakpoint: 840,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                },
+            },
         ],
     };
 
@@ -43,7 +51,7 @@ const Blog = () => {
             <div className="absolute md:block hidden right-0 top-1/2 -translate-y-1/2 -z-10">
                 <img src={images.IMG_SHAPE_BONE} className="w-32" />
             </div>
-            <div className="container mx-auto md:pt-20 pt-12 pb-12 md:px-0 px-6">
+            <div className="container mx-auto md:pt-20 pt-12 pb-12">
                 <div className="section-heading md:w-1/2 w-auto text-center mx-auto ">
                     <p className="flex justify-center text-orange-500 uppercase text-[14px] font-bold">
                         <span className="mr-1">

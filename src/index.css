@@ -44,7 +44,7 @@
 @layer components {
     /* Common */
     .heading {
-        @apply md:text-[50px] md:leading-[60px] text-[32px] leading-[42px] font-bold;
+        @apply lg:text-[50px] lg:leading-[60px] md:text-[45px] md:leading-[55px] text-[32px] leading-[42px] font-bold;
     }
     /* Modal */
     .modal {
@@ -156,6 +156,20 @@
         @apply h-[150px] w-[150px] text-[70px] text-center leading-[150px] duration-300 inline-block absolute top-0 -mt-[75px] -ml-[75px] left-1/2 rounded-drag border-8 border-white;
     }
 
+    .service-item p {
+        overflow: hidden;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        line-height: 1.8em;
+        max-height: 5.4em;
+        line-height: 1.6em;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
     /* Company */
     .company-list .company-item:hover img {
         @apply filter-none !opacity-100 transition duration-300;
@@ -170,7 +184,7 @@
     }
     /* Blog */
     .blog-cate__item {
-        @apply flex items-center text-[14px] text-gray-600;
+        @apply flex items-center text-[11px] xl:text-[13px] text-gray-600;
     }
     .blog-cate__item:not(:first-child) {
         @apply ml-3;

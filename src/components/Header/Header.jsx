@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { BiMenuAltRight } from 'react-icons/bi';
+import { RiMenu4Line } from 'react-icons/ri';
 
 // components
 import MenuDesktop from './MenuDesktop/MenuDesktop';
@@ -38,13 +39,13 @@ const Header = () => {
     return (
         <header
             ref={headerRef}
-            className="fixed z-50 bg-white shadow-sm w-full md:bg-transparent md:shadow-none md:py-0 py-3"
+            className="fixed z-50 bg-white shadow-sm w-full py-3 md:bg-transparent md:shadow-none lg:py-0 "
         >
-            <div className="container mx-auto flex items-center">
-                <div className="flex justify-between items-center md:w-auto w-full md:px-0 px-6 ">
+            <div className="container mx-auto md:flex md:items-center">
+                <div className="flex md:flex-row-reverse gap-x-4 justify-between items-center md:w-auto w-full md:px-0 px">
                     <img alt="No image" src={images.IMG_LOGO} className="md:w-40 w-32" />
-                    <div className="md:hidden block" onClick={handleMenuMobile}>
-                        <BiMenuAltRight className="text-3xl" />
+                    <div className="lg:hidden block" onClick={handleMenuMobile}>
+                        <RiMenu4Line className="text-3xl text-gray-700" />
                     </div>
                 </div>
                 {/* Menu for desktop */}

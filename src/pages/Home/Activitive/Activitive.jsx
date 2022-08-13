@@ -5,6 +5,7 @@ import { images } from '~/constants/images';
 
 // components
 import Counter from '~/components/Counter';
+import Heading from '~/components/Heading';
 
 // Setting background
 const ActivitiveBg = {
@@ -20,24 +21,19 @@ const Activitive = () => {
             id="activitives"
             style={ActivitiveBg}
         >
-            <div className="container mx-auto grid md:grid-cols-2 md:gap-8 grid-cols-1 md:px-0 px-6">
-                <div className="flex items-center md:mt-0 mt-4">
+            <div className="container mx-auto grid lg:grid-cols-2 lg:gap-8 grid-cols-1">
+                <div className="flex items-center mx-auto lg:mt-0 mt-4">
                     <img src={images.IMG_ACTIVITIVE} />
                 </div>
-                <div className="md:mt-0 mt-10">
-                    <div className="flex flex-col md:items-start items-center md:text-left text-center">
-                        <p className="flex text-orange-500 uppercase text-[14px] font-bold">
-                            <span className="mr-1">
-                                <FaDog />
-                            </span>{' '}
-                            Our Activities
-                        </p>
-                        <h1 className="heading">Our activities and experience</h1>
-                        <p className="text-gray-500 mt-6">
-                            Group social time gives your dog an opportunity to run, play, socialize and interact with
-                            other dogs.
-                        </p>
-                    </div>
+                <div className="lg:mt-0 mt-10">
+                    <Heading
+                        className="lg:text-left text-center"
+                        title={'About pawsitive'}
+                        heading={'We keep them happy'}
+                        description={
+                            'Our staff spends time interacting with and monitoring the pets to ensure their safety and happiness while they are with us'
+                        }
+                    />
 
                     <div className="my-6">
                         <Counter />

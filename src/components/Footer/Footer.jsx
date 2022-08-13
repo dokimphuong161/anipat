@@ -21,7 +21,7 @@ const Footer = () => {
     }, []);
     const date = new Date();
     return (
-        <footer className="border-t border-dashed md:pt-20 pt-8 md:px-0 px-6 relative">
+        <footer className="border-t border-dashed md:pt-20 pt-8 relative">
             <div className="absolute -bottom-8 left-0 -z-10 md:block hidden">
                 <img src={images.IMG_SHAPE_DOG1} className="w-32" />
             </div>

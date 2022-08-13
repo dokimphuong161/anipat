@@ -21,17 +21,17 @@ const About = () => {
     const { data } = useGetData('aboutData');
     return (
         <section
-            className="about md:pt-24 pt-14 pb-12 mt-8 relative before:content[''] before:absolute before:bg-wave before:top-0 before:left-0 before:right-0 before:h-[24px]"
+            className="about lg:pt-24 pt-14 pb-12 mt-8 relative before:content[''] before:absolute before:bg-wave before:top-0 before:left-0 before:right-0 before:h-[24px]"
             id="about"
             style={AboutBg}
         >
-            <div className="container mx-auto grid md:grid-cols-2 md:gap-8 grid-cols-1 md:px-0 px-6">
+            <div className="container mx-auto grid lg:grid-cols-2 lg:gap-8 grid-cols-1">
                 <div className="flex items-center md:mt-0 mt-4">
                     <img src={images.IMG_ABOUT} />
                 </div>
-                <div className="md:mt-0 mt-10">
+                <div className="lg:mt-0 mt-10">
                     <Heading
-                        className="md:text-left text-center"
+                        className="lg:text-left text-center"
                         title={'About pawsitive'}
                         heading={'We keep them happy'}
                         description={

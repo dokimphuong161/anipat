@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const Heading = ({ title, heading, description, className, center }) => {
     return (
-        <div className={`flex flex-col md:items-start items-center  ${className}`}>
+        <div className={`flex flex-col lg:items-start items-center  ${className}`}>
             <p
                 className={`flex justify-center text-orange-500 uppercase text-[14px] font-bold ${
                     center ? 'justify-center mx-auto' : ''

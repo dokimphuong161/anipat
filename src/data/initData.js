@@ -101,7 +101,7 @@ export const initData = {
         },
         {
             id: 'service-3',
-            title: 'Pet Spa and Grooming',
+            title: 'Pet Grooming',
             description:
                 'We understands that your pets are part of your family and we want to care for them like you would.',
             icon: icons.ICON_PET,

@@ -44,28 +44,28 @@ const Banner = () => {
     return (
         <section className="banner md:pt-32 pt-28" style={backgroundImg} id="home">
             <div className="container mx-auto flex items-center justify-between">
-                <div className="banner-content md:w-2/5 md:px-0 w-full px-6">
-                    <h3 className="md:text-[75px] md:leading-[85px] text-[60px] leading-[75px] font-black">
+                <div className="banner-content w-full lg:w-[45%] lg:pr-5">
+                    <h3 className="font-black text-5xl xl:text-7xl">
                         <span className="text-primary-900">Taking care</span> <br />
                         of your pets <br />
                     </h3>
                     <div className="banner-desc w-auto">
                         <Slider {...settings}>{renderDesSliderItem}</Slider>
                     </div>
-                    <div className="banner-button mt-16 flex relative md:w-4/5 w-3/4">
+                    <div className="banner-button mt-16 flex justify-start w-4/5 sm:w-3/5 md:mx-0 md:w-2/4 lg:w-4/5 relative">
                         <a href="#">
                             <img
                                 alt="No image"
                                 src={images.IMG_BOOK_BTN}
-                                className="hover:rotate-12 transition duration-500 md:w-auto w-48"
+                                className="hover:rotate-12 transition duration-500 w-48 xl:w-auto"
                             />
                         </a>
-                        <ArrowIcon className="w-20 absolute -top-8 animate-wiggle md:right-0 -right-4" />
+                        <ArrowIcon className="w-20 absolute -top-8 animate-wiggle hidden xs:block right-0" />
                     </div>
                 </div>
             </div>
 
-            <div className="banner-img relavive md:block hidden">
+            <div className="banner-img relavive hidden lg:block">
                 <img alt="No image" src={images.IMG_BANNER} className=" absolute top-0 right-0 md:w-[55%] "></img>
                 <BannerRating />
             </div>

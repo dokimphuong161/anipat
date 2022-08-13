@@ -21,7 +21,7 @@ const Pricing = () => {
 
     return (
         <section className="pricing" id="pricing" style={PricingBg}>
-            <div className="container mx-auto pt-16 md:pb-12 pb-4 md:px-0 px-6">
+            <div className="container mx-auto pt-16 md:pb-12 pb-4">
                 <div className="section-heading md:w-1/2 w-auto text-center mx-auto mb-8">
                     <p className="flex justify-center text-orange-500 uppercase text-[14px] font-bold">
                         <span className="mr-1">
@@ -31,7 +31,7 @@ const Pricing = () => {
                     </p>
                     <h1 className="heading">The Best Choice</h1>
                 </div>
-                <div className="grid md:grid-cols-3 grid-cols-1 gap-6 mt-4">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-6 mt-4">
                     {data.map((item, index) => (
                         <PricingItem item={item} key={index} />
                     ))}

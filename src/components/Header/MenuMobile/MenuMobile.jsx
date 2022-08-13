@@ -22,13 +22,13 @@ const MenuMobile = ({ open, onClose }) => {
 
     return (
         <>
-            <div className={`overlay md:hidden ${open ? 'block' : 'hidden'}`}></div>
+            <div className={`overlay lg:hidden ${open ? 'block' : 'hidden'}`}></div>
             <div
-                className={`z-50 fixed top-0 py-16 pl-6 bg-white w-3/4 h-full md:hidden duration-500 ${
+                className={`z-50 fixed overflow-scroll scrollbar-hide top-0 py-16 pl-6 bg-white sm:w-1/2 md:w-2/5 w-3/4 h-full  duration-500 lg:hidden ${
                     open ? 'right-0' : 'right-[-100%]'
                 }`}
             >
-                <MdClose onClick={onClose} className="absolute top-4 right-4 text-3xl" />
+                <MdClose onClick={onClose} className="absolute top-4 right-4 text-3xl text-gray-700" />
                 <nav>
                     {menus.map((menu, index) => (
                         <MenuMobileItem items={menu} key={index} />

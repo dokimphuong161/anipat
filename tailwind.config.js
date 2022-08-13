@@ -32,20 +32,11 @@ module.exports = {
                 },
             },
             screens: {
-                sm: '640px',
-                // => @media (min-width: 640px) { ... }
-
-                md: '768px',
-                // => @media (min-width: 768px) { ... }
-
-                lg: '1024px',
-                // => @media (min-width: 1024px) { ... }
-
-                xl: '1140px',
-                // => @media (min-width: 1280px) { ... }
-
-                '2xl': '1536px',
-                // => @media (min-width: 1536px) { ... }
+                xs: '480px',
+                xl: '1200px',
+            },
+            container: {
+                padding: '1.5rem',
             },
             boxShadow: {
                 around: '0px 0px 30px 5px #FFF0E1',
@@ -97,5 +88,5 @@ module.exports = {
         display: ['group-hover'],
         visibility: ['group-hover'],
     },
-    plugins: [],
+    plugins: [require('tailwind-scrollbar-hide')],
 };

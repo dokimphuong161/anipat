@@ -7,8 +7,8 @@ const DescSliderItem = ({ item }) => {
                 <Icon className="md:w-[5.8rem] w-20" />
             </div>
             <div className="banner-desc-content pl-6 flex flex-col self-center">
-                <h4 className="font-extrabold text-[24px]">{item.title}</h4>
-                <p className="mt-1">{item.description}</p>
+                <h4 className="font-extrabold text-lg xl:text-2xl">{item.title}</h4>
+                <p className="mt-1 text-[13px] text-sm xl:text-base">{item.description}</p>
             </div>
         </div>
     );

@@ -52,14 +52,14 @@ const BookingForm = () => {
     };
 
     return (
-        <form ref={formRef} onSubmit={form.handleSubmit(sendMail)} className="mt-10">
+        <form ref={formRef} onSubmit={form.handleSubmit(sendMail)} className="mt-5">
             <InputField placeholder="Username" name="username" form={form} />
             <SelectField values={pettypeSelect} name="pettype" form={form} />
             <SelectField values={serviceSelect} name="service" form={form} />
             <InputField type="date" name="birthday" form={form} />
             <InputField placeholder="Email" name="email" form={form} />
 
-            <Button type="submit" primary shape className="md:mt-10 mt-8 w-full">
+            <Button type="submit" primary shape className="lg:mt-10 mt-6 py-2 px-3 xl:py-4 w-full">
                 Send mail to book
             </Button>
         </form>

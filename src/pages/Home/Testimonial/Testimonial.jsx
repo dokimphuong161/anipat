@@ -1,7 +1,6 @@
-import Slider from 'react-slick';
 import { useRef } from 'react';
-import { FaDog } from 'react-icons/fa';
 import { FiPlay } from 'react-icons/fi';
+import Slider from 'react-slick';
 
 // images
 import { images } from '~/constants/images';
@@ -14,6 +13,7 @@ import Button from '~/components/Button';
 import Modal from '~/components/Modal';
 import { ModalContent } from '~/components/Modal/Modal';
 import TestimonialItem from './TestimonialItem';
+import Heading from '~/components/Heading';
 
 const TestiBg = {
     backgroundImage: `url("${images.IMG_TESTIMONIAL_BG}")`,
@@ -46,29 +46,25 @@ const Testimonial = () => {
             className="testimonial relative pt-28 pb-28 before:content[''] before:absolute before:bg-cloud before:-top-2 before:left-0 before:right-0 before:h-[58px] after:content[''] after:absolute after:rotate-180 after:bg-cloud after:-bottom-2 after:left-0 after:right-0 after:h-[58px]"
             style={TestiBg}
         >
-            <div className="container mx-auto grid md:grid-cols-2 md:gap-8 grid-cols-1 md:px-0 px-6">
+            <div className="container mx-auto grid lg:grid-cols-2 lg:gap-8 grid-cols-1">
                 <div className="">
-                    <div className="flex flex-col md:items-start items-center md:text-left text-center">
-                        <p className="flex text-orange-500 uppercase text-[14px] font-bold">
-                            <span className="mr-1">
-                                <FaDog />
-                            </span>{' '}
-                            Our Testimonials
-                        </p>
-                        <h1 className="heading">Review from our customers</h1>
-                    </div>
+                    <Heading
+                        className="lg:text-left text-center"
+                        title={'OUR TESTIMONIALS'}
+                        heading={'Review from our customers'}
+                    />
                     <div className="testimonial-slide mt-6">
                         <Slider {...settings}>{renderTestimonialItem}</Slider>
                     </div>
                 </div>
-                <div className="flex items-center md:mt-0 mt-20 relative">
+                <div className="flex items-center lg:mt-0 mt-20 relative">
                     <div className="absolute left-1/2 -translate-x-1/2">
                         <Button
                             primary
-                            className="btn-play relative p-0 w-20 h-20 flex items-center justify-center"
+                            className="btn-play relative p-0 w-14 h-14 sm:w-20 sm:h-20 flex items-center justify-center"
                             onClick={setModalActive}
                         >
-                            <FiPlay className="text-2xl" />
+                            <FiPlay className="text-xl sm:text-2xl" />
                         </Button>
                     </div>
                     <img src={images.IMG_TESTIMONIAL} />

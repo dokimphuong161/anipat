@@ -19,9 +19,9 @@ const MenuDesktop = () => {
         }
     }, []);
     return (
-        <div className="md:flex justify-between items-center hidden ml-8 flex-1">
+        <div className="flex justify-between items-center ml-8 flex-1">
             <nav>
-                <ul className="flex menus">
+                <ul className="lg:flex hidden menus">
                     {menus.map((menu, index) => {
                         const depthLevel = 0;
                         return <MenuDesktopItem items={menu} key={index} depthLevel={depthLevel} />;
@@ -30,7 +30,7 @@ const MenuDesktop = () => {
             </nav>
             <div className="flex">
                 <Button
-                    className="text-[14px] font-bold group hover:bg-black"
+                    className="text-[14px] font-bold group hover:bg-black md:flex hidden"
                     hasIcon
                     primary
                     small

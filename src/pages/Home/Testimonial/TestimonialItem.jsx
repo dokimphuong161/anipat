@@ -19,7 +19,7 @@ const TestimonialItem = ({ item }) => {
     return (
         <div
             style={TestiBg}
-            className="testimonial-item relative before:content-['“'] before:absolute md:before:-top-3 before:top-3  md:before:right-10 before:right-5 before:font-bold md:before:text-[250px] before:text-[120px] before:leading-[1] before:text-primary-200 md:rounded-none rounded-3xl"
+            className="testimonial-item relative before:content-['“'] before:absolute md:before:-top-3 before:top-3  md:before:right-10 before:right-3 before:font-bold sm:before:text-[150px] sm:before:right-6 md:before:text-[250px] before:text-[80px] before:leading-[1] before:text-primary-200 md:rounded-none rounded-3xl"
         >
             <div className="py-6 md:px-10 px-4">
                 <div className="flex items-center">

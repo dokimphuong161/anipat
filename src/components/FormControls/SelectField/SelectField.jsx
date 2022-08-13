@@ -17,7 +17,7 @@ const SelectField = (props) => {
                     <select
                         onChange={onChange}
                         name={name}
-                        className="input-field bg-pink-50 w-full py-3 shadow-inner px-7 rounded-full text-gray-500"
+                        className="input-field bg-pink-50 w-full py-2 xl:py-3 shadow-inner px-7 rounded-full text-gray-500"
                     >
                         {values.map((item, index) => (
                             <option key={index} value={item.value}>

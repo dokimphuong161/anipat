@@ -13,10 +13,10 @@ const BlogItem = ({ item }) => {
             <div className="blog-img relative">
                 <img src={item.image} className="rounded-2xl" />
                 <div
-                    className={`${item.bgPrimary} blog-time absolute right-0 top-0 rounded-tr-2xl py-3 px-2 md:w-[18%] w-[15%] text-center`}
+                    className={`${item.bgPrimary} blog-time absolute right-0 top-0 rounded-tr-2xl py-2 px-1 xl:w-[18%] w-[20%] text-center`}
                 >
                     <MdPets className="text-white text-3xl mx-auto" />
-                    <p className="text-[20px] font-bold leading-[20px] mt-2">
+                    <p className="text-base md:text-[18px] font-bold text-gray-600 mt-2">
                         {item.date.day}
                         <br />
                         {item.date.month}
@@ -24,7 +24,7 @@ const BlogItem = ({ item }) => {
                 </div>
             </div>
             <div className="blog-cate px-2 flex items-center mt-3">
-                <p className="blog-cate__item ">
+                <p className="blog-cate__item">
                     <span>
                         <FiUser />
                     </span>
@@ -44,7 +44,7 @@ const BlogItem = ({ item }) => {
                 </p>
             </div>
             <div className="blog-content px-2 mt-5">
-                <h1 className="text-[20px] font-bold hover:text-orange-400">{item.title}</h1>
+                <h1 className="text-[18px] xs:text-[20px] font-bold hover:text-orange-400">{item.title}</h1>
                 <p className="mt-2">{item.content}</p>
                 <Button className="mt-3 mb-2" highlight small shape>
                     Read more

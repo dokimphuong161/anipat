@@ -5,28 +5,28 @@ import { images } from '~/constants/images';
 const Contact = () => {
     return (
         <section className="activitive md:mt-16 mt-8 relative md:px-0 px-6" id="contact">
-            <div className="absolute w-1/4 right-16 top-10 p-2 bg-white rounded-3xl shadow-lg md:block hidden">
+            <div className="absolute md:w-2/5 lg:w-1/4 right-16 top-10 p-2 bg-white rounded-3xl shadow-lg md:block hidden">
                 <img src={images.IMG_INFO} className="rounded-2xl" />
                 <div className="p-5 w-full ">
                     <div className="flex items-start">
                         <img src={icons.ICON_ADDRESS} className="w-10" />
                         <div className="ml-4">
                             <h1 className="text-primary-900 font-bold text-[18px]">Address</h1>
-                            <p className="text-gray-500">Thuan An, Binh Duong</p>
+                            <p className="text-gray-500 text-[13px] ">Thuan An, Binh Duong</p>
                         </div>
                     </div>
                     <div className="flex items-start mt-6">
                         <img src={icons.ICON_EMAIL} className="w-10" />
                         <div className="ml-4">
                             <h1 className="text-primary-900 font-bold text-[18px]">Email</h1>
-                            <p className="text-gray-500">dokimphuong1999gmail.com</p>
+                            <p className="text-gray-500 text-[13px]">dokimphuong1999gmail.com</p>
                         </div>
                     </div>
                     <div className="flex items-start mt-6">
                         <img src={icons.ICON_PHONE} className="w-10" />
                         <div className="ml-4">
                             <h1 className="text-primary-900 font-bold text-[18px]">Telephone</h1>
-                            <p className="text-gray-500">+84 967 028 275</p>
+                            <p className="text-gray-500 text-[13px]">+84 967 028 275</p>
                         </div>
                     </div>
                 </div>
@@ -48,21 +48,21 @@ const Contact = () => {
                         <img src={icons.ICON_ADDRESS} className="w-10" />
                         <div className="ml-4">
                             <h1 className="text-primary-900 font-bold text-[18px]">Address</h1>
-                            <p className="text-gray-500">Thuan An, Binh Duong</p>
+                            <p className="text-gray-500 text-[12px]">Thuan An, Binh Duong</p>
                         </div>
                     </div>
                     <div className="flex items-start mt-6">
                         <img src={icons.ICON_EMAIL} className="w-10" />
                         <div className="ml-4">
                             <h1 className="text-primary-900 font-bold text-[18px]">Email</h1>
-                            <p className="text-gray-500">dokimphuong1999gmail.com</p>
+                            <p className="text-gray-500 text-[12px]">dokimphuong1999gmail.com</p>
                         </div>
                     </div>
                     <div className="flex items-start mt-6">
                         <img src={icons.ICON_PHONE} className="w-10" />
                         <div className="ml-4">
                             <h1 className="text-primary-900 font-bold text-[18px]">Telephone</h1>
-                            <p className="text-gray-500">+84 967 028 275</p>
+                            <p className="text-gray-500 text-[12px]">+84 967 028 275</p>
                         </div>
                     </div>
                 </div>
