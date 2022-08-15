@@ -37,7 +37,7 @@ const About = () => {
             <motion.div
                 variants={hideAndShowVariants}
                 animate={controls}
-                transition={{ delay: 0.03, type: 'tween', duration: 0.8 }}
+                transition={{ delay: 0.03, type: 'tween', duration: 0.5 }}
                 className="container mx-auto grid lg:grid-cols-2 lg:gap-8 grid-cols-1"
             >
                 <div className="flex items-center md:mt-0 mt-4">

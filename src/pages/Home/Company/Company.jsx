@@ -54,7 +54,7 @@ const Company = () => {
             <motion.div
                 variants={fadeUpVariants}
                 animate={controls}
-                transition={{ delay: 0.2, type: 'tween', duration: 0.6 }}
+                transition={{ delay: 0.02, type: 'tween', duration: 0.4 }}
                 className="container mx-auto"
             >
                 <p className="flex justify-center mb-8 text-orange-500 uppercase text-[14px] font-bold">

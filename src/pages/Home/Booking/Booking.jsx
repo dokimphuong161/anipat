@@ -47,7 +47,7 @@ const Booking = () => {
                     </motion.div>
                     <motion.div
                         variants={fadeToLeftVariants}
-                        transition={{ delay: 0.3, type: 'spring' }}
+                        transition={{ delay: 0.03, type: 'spring' }}
                         animate={controls}
                         className="absolute z-3"
                     >
@@ -56,7 +56,7 @@ const Booking = () => {
                     <motion.div
                         variants={fadeToLeftVariants}
                         animate={controls}
-                        transition={{ delay: 0.4, type: 'spring' }}
+                        transition={{ delay: 0.04, type: 'spring' }}
                         className="absolute z-4"
                     >
                         <img src={images.IMG_BOOKING4} />
@@ -65,7 +65,7 @@ const Booking = () => {
                 <div className="mt-16 sm:mt-32">
                     <motion.div
                         variants={fadeUpVariants}
-                        transition={{ delay: 0.3, duration: 0.3, type: 'tween' }}
+                        transition={{ delay: 0.03, duration: 0.3, type: 'tween' }}
                         animate={controls}
                         className="form py-10 md:px-12 px-5 rounded-2xl shadow-large border border-dashed border-primary-300"
                         style={formBg}

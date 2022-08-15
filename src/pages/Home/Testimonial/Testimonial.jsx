@@ -59,7 +59,7 @@ const Testimonial = () => {
                 <motion.div
                     variants={fadeToLeftVariants}
                     animate={controls}
-                    transition={{ delay: 0.3, duration: 0.6, type: 'tween' }}
+                    transition={{ delay: 0.03, duration: 0.4, type: 'tween' }}
                     className=""
                 >
                     <Heading
@@ -74,7 +74,7 @@ const Testimonial = () => {
                 <motion.div
                     variants={fadeToRightVariants}
                     animate={controls}
-                    transition={{ delay: 0.3, duration: 0.6, type: 'tween' }}
+                    transition={{ delay: 0.03, duration: 0.4, type: 'tween' }}
                     className="flex items-center lg:mt-0 mt-20 relative"
                 >
                     <div className="absolute left-1/2 -translate-x-1/2">

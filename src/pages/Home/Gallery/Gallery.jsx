@@ -38,13 +38,13 @@ const Gallery = () => {
                         <motion.img
                             variants={zoomInAndOutVariants}
                             animate={controls}
-                            transition={{ delay: 0.2, duration: 0.4, type: 'tween' }}
+                            transition={{ delay: 0.02, duration: 0.3, type: 'tween' }}
                             src={images.IMG_GALLERY1}
                         />
                         <motion.img
                             variants={zoomInAndOutVariants}
                             animate={controls}
-                            transition={{ delay: 0.3, duration: 0.4, type: 'tween' }}
+                            transition={{ delay: 0.03, duration: 0.3, type: 'tween' }}
                             className="md:mt-5 mt-4"
                             src={images.IMG_GALLERY5}
                         />
@@ -53,13 +53,13 @@ const Gallery = () => {
                         <motion.img
                             variants={zoomInAndOutVariants}
                             animate={controls}
-                            transition={{ delay: 0.3, duration: 0.5, type: 'tween' }}
+                            transition={{ delay: 0.03, duration: 0.3, type: 'tween' }}
                             src={images.IMG_GALLERY2}
                         />
                         <motion.img
                             variants={zoomInAndOutVariants}
                             animate={controls}
-                            transition={{ delay: 0.3, duration: 0.5, type: 'tween' }}
+                            transition={{ delay: 0.03, duration: 0.3, type: 'tween' }}
                             className="md:mt-5 mt-4"
                             src={images.IMG_GALLERY6}
                         />
@@ -68,13 +68,13 @@ const Gallery = () => {
                         <motion.img
                             variants={zoomInAndOutVariants}
                             animate={controls}
-                            transition={{ delay: 0.3, duration: 0.5, type: 'tween' }}
+                            transition={{ delay: 0.03, duration: 0.3, type: 'tween' }}
                             src={images.IMG_GALLERY3}
                         />
                         <motion.img
                             variants={zoomInAndOutVariants}
                             animate={controls}
-                            transition={{ delay: 0.3, duration: 0.5, type: 'tween' }}
+                            transition={{ delay: 0.03, duration: 0.3, type: 'tween' }}
                             className="md:mt-5 mt-4"
                             src={images.IMG_GALLERY7}
                         />
@@ -83,13 +83,13 @@ const Gallery = () => {
                         <motion.img
                             variants={zoomInAndOutVariants}
                             animate={controls}
-                            transition={{ delay: 0.3, duration: 0.5, type: 'tween' }}
+                            transition={{ delay: 0.03, duration: 0.3, type: 'tween' }}
                             src={images.IMG_GALLERY4}
                         />
                         <motion.img
                             variants={zoomInAndOutVariants}
                             animate={controls}
-                            transition={{ delay: 0.3, duration: 0.5, type: 'tween' }}
+                            transition={{ delay: 0.03, duration: 0.2, type: 'tween' }}
                             className="md:mt-5 mt-4"
                             src={images.IMG_GALLERY8}
                         />

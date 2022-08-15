@@ -31,7 +31,7 @@ const Activitive = () => {
                 <motion.div
                     variants={fadeToLeftVariants}
                     animate={controls}
-                    transition={{ delay: 0.3, duration: 0.6, type: 'tween' }}
+                    transition={{ delay: 0.03, duration: 0.4, type: 'tween' }}
                     className="flex items-center mx-auto lg:mt-0 mt-4"
                 >
                     <img src={images.IMG_ACTIVITIVE} />
@@ -39,7 +39,7 @@ const Activitive = () => {
                 <motion.div
                     variants={fadeToRightVariants}
                     animate={controls}
-                    transition={{ delay: 0.3, duration: 0.6, type: 'tween' }}
+                    transition={{ delay: 0.03, duration: 0.4, type: 'tween' }}
                     className="lg:mt-0 mt-10"
                 >
                     <Heading

@@ -16,7 +16,7 @@ const Contact = () => {
             <motion.div
                 variants={zoomInAndOutVariants}
                 animate={controls}
-                transition={{ duration: 0.6, type: 'tween' }}
+                transition={{ duration: 0.4, type: 'tween' }}
                 className="absolute md:w-2/5 lg:w-1/4 right-16 top-10 p-2 bg-white rounded-3xl shadow-lg md:block hidden"
             >
                 <img src={images.IMG_INFO} className="rounded-2xl" />
@@ -57,7 +57,7 @@ const Contact = () => {
             <motion.div
                 variants={zoomInAndOutVariants}
                 animate={controls}
-                transition={{ duration: 0.6, type: 'tween' }}
+                transition={{ duration: 0.3, type: 'tween' }}
                 className="mt-10 mb-10 bg-gray-50 rounded-3xl shadow-lg md:hidden block"
             >
                 <img src={images.IMG_INFO} className="rounded-tl-3xl rounded-tr-3xl" />

@@ -15,7 +15,7 @@ const CounterItem = ({ item, animateCustom }) => {
         <motion.div
             variants={zoomInAndOutVariants}
             animate={animateCustom}
-            transition={{ delay: 0.1, duration: 0.6, stiffness: 5000 }}
+            transition={{ delay: 0.01, duration: 0.4, stiffness: 5000 }}
             className="py-5 md:px-8 px-6 rounded-md text-white"
             style={backgroundImg}
         >

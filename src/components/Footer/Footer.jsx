@@ -33,7 +33,7 @@ const Footer = () => {
             <motion.div
                 variants={fadeUpVariants}
                 animate={controls}
-                transition={{ delay: 0.3, duration: 0.6, type: 'tween' }}
+                transition={{ delay: 0.03, duration: 0.4, type: 'tween' }}
                 className="absolute -bottom-8 left-0 -z-10 md:block hidden"
             >
                 <img src={images.IMG_SHAPE_DOG1} className="w-32" />
@@ -41,7 +41,7 @@ const Footer = () => {
             <motion.div
                 variants={fadeUpVariants}
                 animate={controls}
-                transition={{ delay: 0.3, duration: 0.6, type: 'tween' }}
+                transition={{ delay: 0.03, duration: 0.4, type: 'tween' }}
                 className="absolute md:block hidden right-0 bottom-0 -z-10 md:block hidden"
             >
                 <img src={images.IMG_SHAPE_DOG2} className="w-24" />
@@ -50,7 +50,7 @@ const Footer = () => {
                 <motion.div
                     variants={fadeUpVariants}
                     animate={controls}
-                    transition={{ delay: 0.3, duration: 0.3, type: 'tween' }}
+                    transition={{ delay: 0.03, duration: 0.3, type: 'tween' }}
                     className="grid md:grid-cols-4 grid-cols-1 pb-10"
                 >
                     <div className="footer-info md:pr-10 pr-0 md:mb-0 mb-4 flex flex-col md:items-start items-center">
@@ -135,7 +135,7 @@ const Footer = () => {
                 <motion.div
                     variants={zoomInAndOutVariants}
                     animate={controls}
-                    transition={{ delay: 0.3, duration: 0.6, type: 'tween' }}
+                    transition={{ delay: 0.03, duration: 0.4, type: 'tween' }}
                     className="flex md:flex-row flex-col items-center justify-between md:py-6 py-4 md:px-8 px-0 border-t border-dashed"
                 >
                     <p className="text-[12px] md:text-left text-center">
