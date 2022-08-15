@@ -58,15 +58,15 @@ export const toggleOverlayVariants = {
         opacity: 1,
         visibility: 'visible',
         transition: {
-            duration: 0.4,
+            duration: 0.2,
         },
     },
     closed: {
         opacity: 0,
         visibility: 'hidden',
         transition: {
-            duration: 0.4,
-            delay: 0.4,
+            duration: 0.2,
+            delay: 0.2,
         },
     },
 };
@@ -74,23 +74,23 @@ export const toggleMenuMobileVariants = {
     open: {
         clipPath: `circle(1000px at 100% 0)`,
         transition: {
-            duration: 0.4,
+            duration: 0.2,
         },
     },
     closed: {
         clipPath: `circle(0px at 100% 0)`,
         transition: {
-            duration: 0.2,
-            delay: 0.4,
+            duration: 0.1,
+            delay: 0.2,
         },
     },
 };
 export const menuItemVariants = {
     open: {
-        transition: { staggerChildren: 0.07, delayChildren: 0.2 },
+        transition: { staggerChildren: 0.04, delayChildren: 0.1 },
     },
     closed: {
-        transition: { staggerChildren: 0.05, staggerDirection: -1 },
+        transition: { staggerChildren: 0.02, staggerDirection: -1 },
     },
 };
 export const menuMobileItemVariants = {
@@ -98,16 +98,16 @@ export const menuMobileItemVariants = {
         y: 0,
         opacity: 1,
         transition: {
-            duration: 0.8,
-            ease: [0.6, 0.05, -0.1, 0.9],
+            duration: 0.4,
+            ease: [0.6, 0.05, -0.1, 0.6],
         },
     },
     closed: {
         y: 50,
         opacity: 0,
         transition: {
-            duration: 0.8,
-            ease: [0.6, 0.05, -0.1, 0.9],
+            duration: 0.4,
+            ease: [0.6, 0.05, -0.1, 0.6],
         },
     },
 };
