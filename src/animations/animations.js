@@ -52,18 +52,6 @@ export const zoomInAndOutVariants = {
     },
 };
 
-export const iconsYoyoVariants = {
-    hidden: {
-        scale: 0.5,
-    },
-    show: {
-        scale: 1,
-        transition: {
-            yoyo: Infinity,
-        },
-    },
-};
-
 // Menu Mobile animations
 export const toggleOverlayVariants = {
     open: {
@@ -140,16 +128,5 @@ export const bannerRatingVariants = {
     show: {
         opacity: 1,
         scale: 1,
-    },
-};
-
-// Service animation
-
-export const serviceStaggerVariants = {
-    show: {
-        transition: { staggerChildren: 1, delayChildren: 0.3 },
-    },
-    hidden: {
-        transition: { staggerChildren: 1, staggerDirection: -1 },
     },
 };
