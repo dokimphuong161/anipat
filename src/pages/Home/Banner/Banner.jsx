@@ -16,6 +16,10 @@ import useGetData from '~/hooks/useGetData';
 import BannerRating from './BannerRating';
 import DescSliderItem from './DescSliderItem';
 
+// animations
+import { motion } from 'framer-motion';
+import { fadeToLeftVariants, hideAndShowVariants } from '~/animations/animations';
+
 // Setting background
 const backgroundImg = {
     backgroundImage: `url("${images.IMG_BANNER_BG}")`,
@@ -43,7 +47,11 @@ const Banner = () => {
     const renderDesSliderItem = data.map((item) => <DescSliderItem item={item} key={item.id} />);
     return (
         <section className="banner md:pt-32 pt-28" style={backgroundImg} id="home">
-            <div className="container mx-auto flex items-center justify-between">
+            <motion.div
+                variants={fadeToLeftVariants}
+                transition={{ delay: 0.3, duration: 0.6, type: 'tween' }}
+                className="container mx-auto flex items-center justify-between"
+            >
                 <div className="banner-content w-full lg:w-[45%] lg:pr-5">
                     <h3 className="font-black text-5xl xl:text-7xl">
                         <span className="text-primary-900">Taking care</span> <br />
@@ -63,10 +71,16 @@ const Banner = () => {
                         <ArrowIcon className="w-20 absolute -top-8 animate-wiggle hidden xs:block right-0" />
                     </div>
                 </div>
-            </div>
+            </motion.div>
 
             <div className="banner-img relavive hidden lg:block">
-                <img alt="No image" src={images.IMG_BANNER} className=" absolute top-0 right-0 md:w-[55%] "></img>
+                <motion.img
+                    variants={hideAndShowVariants}
+                    transition={{ delay: 0.3, duration: 0.6, type: 'tween' }}
+                    alt="No image"
+                    src={images.IMG_BANNER}
+                    className=" absolute top-0 right-0 md:w-[55%] "
+                ></motion.img>
                 <BannerRating />
             </div>
         </section>

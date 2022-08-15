@@ -86,21 +86,21 @@ export const initData = {
     ],
     serviceData: [
         {
-            id: 'service-1',
+            id: 1,
             title: 'Full diagnostics',
             description: 'We can help you get safe and simple diagnostic tests done for your beloved dogs and cats. ',
             icon: icons.ICON_VETERINARY,
             bgColor: 'bg-orange-100',
         },
         {
-            id: 'service-2',
+            id: 2,
             title: 'Dog Training',
             description: 'Get started on the puppy training basics with this guide on crate training, potty training',
             icon: icons.ICON_DOG,
             bgColor: 'bg-sky-100',
         },
         {
-            id: 'service-3',
+            id: 3,
             title: 'Pet Grooming',
             description:
                 'We understands that your pets are part of your family and we want to care for them like you would.',
@@ -108,7 +108,7 @@ export const initData = {
             bgColor: 'bg-yellow-100',
         },
         {
-            id: 'service-4',
+            id: 4,
             title: 'Pet Veterinary ',
             description:
                 'We provide affordable veterinary care to ensure your pet is healthy year-round for life out here.',
@@ -116,14 +116,14 @@ export const initData = {
             bgColor: 'bg-lime-100',
         },
         {
-            id: 'service-5',
+            id: 5,
             title: 'Pet Selling',
             description: 'Buying and selling pets can be tough and end up costing you more money than it should. ',
             icon: icons.ICON_SHOP,
             bgColor: 'bg-yellow-100',
         },
         {
-            id: 'service-6',
+            id: 6,
             title: 'Pet Foods',
             description:
                 'Our pets find a way into our hearts in so many ways. Our dogs and cats are beloved members of the family',

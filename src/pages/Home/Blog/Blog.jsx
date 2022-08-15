@@ -1,5 +1,5 @@
-import Slider from 'react-slick';
 import { FaDog } from 'react-icons/fa';
+import Slider from 'react-slick';
 
 // images
 import { images } from '~/constants/images';
@@ -44,7 +44,7 @@ const Blog = () => {
 
     const renderBlogItem = data.map((item, index) => <BlogItem item={item} key={index} />);
     return (
-        <section className="blog mt-2 relative">
+        <section className="blog mt-8 lg:mt-4 relative">
             <div className="absolute md:left-32 md:top-16 top-0 left-1/2 -translate-x-1/2 -z-10">
                 <img src={images.IMG_SHAPE_BIRD} className="w-32" />
             </div>

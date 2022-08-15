@@ -12,7 +12,7 @@ const Services = () => {
     // Get service data
     const { data } = useGetData('serviceData');
     // Render Service List
-    const renderServiceList = data.map((item) => <ServiceItem item={item} key={item.id} />);
+    const renderServiceList = data.map((item) => <ServiceItem item={item} index={item.id} />);
     return (
         <section className="services relative pt-28" id="service">
             <div className="absolute left-0 top-0 -z-10">

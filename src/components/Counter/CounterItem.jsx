@@ -1,8 +1,10 @@
-import React from 'react';
-import CountUp from 'react-countup';
 import PropTypes from 'prop-types';
+import CountUp from 'react-countup';
 
-const CounterItem = ({ item }) => {
+import { motion } from 'framer-motion';
+import { zoomInAndOutVariants } from '~/animations/animations';
+
+const CounterItem = ({ item, animateCustom }) => {
     const backgroundImg = {
         backgroundImage: `url("${item.image}")`,
         backgroundSize: 'cover',
@@ -10,13 +12,19 @@ const CounterItem = ({ item }) => {
         backgroundRepeat: 'no-repeat',
     };
     return (
-        <div className="py-5 md:px-8 px-6 rounded-md text-white" style={backgroundImg}>
+        <motion.div
+            variants={zoomInAndOutVariants}
+            animate={animateCustom}
+            transition={{ delay: 0.1, duration: 0.6, stiffness: 5000 }}
+            className="py-5 md:px-8 px-6 rounded-md text-white"
+            style={backgroundImg}
+        >
             <p className="md:text-4xl text-3xl font-bold">
                 <CountUp end={item.endNumber} duration={5} />
                 <span>+</span>
             </p>
             <p className="uppercase md:text-[16px] text-[14px] font-bold mt-3">{item.title}</p>
-        </div>
+        </motion.div>
     );
 };
 

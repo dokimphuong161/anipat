@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { useRef } from 'react';
 import { FiPlay } from 'react-icons/fi';
 import Slider from 'react-slick';
@@ -7,13 +8,17 @@ import { images } from '~/constants/images';
 
 // hooks
 import useGetData from '~/hooks/useGetData';
+import { useScroll } from '~/hooks/useScroll';
 
 // components
 import Button from '~/components/Button';
+import Heading from '~/components/Heading';
 import Modal from '~/components/Modal';
 import { ModalContent } from '~/components/Modal/Modal';
 import TestimonialItem from './TestimonialItem';
-import Heading from '~/components/Heading';
+
+// animations
+import { fadeToLeftVariants, fadeToRightVariants } from '~/animations/animations';
 
 const TestiBg = {
     backgroundImage: `url("${images.IMG_TESTIMONIAL_BG}")`,
@@ -22,6 +27,9 @@ const TestiBg = {
     backgroundRepeat: 'no-repeat',
 };
 const Testimonial = () => {
+    // Hook useScroll
+    const [element, controls] = useScroll();
+
     // Get testimonial data
     const { data } = useGetData('testimonialsData');
     const settings = {
@@ -42,12 +50,18 @@ const Testimonial = () => {
     };
     return (
         <section
+            ref={element}
             id="testimonials"
             className="testimonial relative pt-28 pb-28 before:content[''] before:absolute before:bg-cloud before:-top-2 before:left-0 before:right-0 before:h-[58px] after:content[''] after:absolute after:rotate-180 after:bg-cloud after:-bottom-2 after:left-0 after:right-0 after:h-[58px]"
             style={TestiBg}
         >
             <div className="container mx-auto grid lg:grid-cols-2 lg:gap-8 grid-cols-1">
-                <div className="">
+                <motion.div
+                    variants={fadeToLeftVariants}
+                    animate={controls}
+                    transition={{ delay: 0.3, duration: 0.6, type: 'tween' }}
+                    className=""
+                >
                     <Heading
                         className="lg:text-left text-center"
                         title={'OUR TESTIMONIALS'}
@@ -56,8 +70,13 @@ const Testimonial = () => {
                     <div className="testimonial-slide mt-6">
                         <Slider {...settings}>{renderTestimonialItem}</Slider>
                     </div>
-                </div>
-                <div className="flex items-center lg:mt-0 mt-20 relative">
+                </motion.div>
+                <motion.div
+                    variants={fadeToRightVariants}
+                    animate={controls}
+                    transition={{ delay: 0.3, duration: 0.6, type: 'tween' }}
+                    className="flex items-center lg:mt-0 mt-20 relative"
+                >
                     <div className="absolute left-1/2 -translate-x-1/2">
                         <Button
                             primary
@@ -68,7 +87,7 @@ const Testimonial = () => {
                         </Button>
                     </div>
                     <img src={images.IMG_TESTIMONIAL} />
-                </div>
+                </motion.div>
                 <VideoIntroModal />
             </div>
         </section>

@@ -11,9 +11,11 @@ import Pricing from './Pricing';
 import Services from './Services';
 import Testimonial from './Testimonial';
 
+// animations
+
 const Home = () => {
     return (
-        <>
+        <div>
             <Banner />
             <About />
             <Services />
@@ -25,7 +27,7 @@ const Home = () => {
             <Gallery />
             <Company />
             <Contact />
-        </>
+        </div>
     );
 };
 

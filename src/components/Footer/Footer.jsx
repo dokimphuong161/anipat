@@ -3,6 +3,7 @@ import { AiOutlineInstagram, AiOutlineTwitter } from 'react-icons/ai';
 import { BsFacebook, BsPhoneVibrate, BsPinterest } from 'react-icons/bs';
 import { MdOutlinePhoneInTalk } from 'react-icons/md';
 import { TbMailForward } from 'react-icons/tb';
+import { motion } from 'framer-motion';
 
 // images
 import { images } from '~/constants/images';
@@ -10,7 +11,14 @@ import { images } from '~/constants/images';
 // data
 import { footerLinks } from '~/data/initData';
 
+// hooks
+import { useScroll } from '~/hooks/useScroll';
+import { fadeUpVariants, zoomInAndOutVariants } from '~/animations/animations';
+
 const Footer = () => {
+    // Hook useScroll
+    const [element, controls] = useScroll();
+
     const [footerLink, setFooterLink] = useState([]);
     useEffect(() => {
         if (!!footerLinks) {
@@ -21,15 +29,30 @@ const Footer = () => {
     }, []);
     const date = new Date();
     return (
-        <footer className="border-t border-dashed md:pt-20 pt-8 relative">
-            <div className="absolute -bottom-8 left-0 -z-10 md:block hidden">
+        <footer className="border-t border-dashed md:pt-20 pt-8 relative" ref={element}>
+            <motion.div
+                variants={fadeUpVariants}
+                animate={controls}
+                transition={{ delay: 0.3, duration: 0.6, type: 'tween' }}
+                className="absolute -bottom-8 left-0 -z-10 md:block hidden"
+            >
                 <img src={images.IMG_SHAPE_DOG1} className="w-32" />
-            </div>
-            <div className="absolute md:block hidden right-0 bottom-0 -z-10 md:block hidden">
+            </motion.div>
+            <motion.div
+                variants={fadeUpVariants}
+                animate={controls}
+                transition={{ delay: 0.3, duration: 0.6, type: 'tween' }}
+                className="absolute md:block hidden right-0 bottom-0 -z-10 md:block hidden"
+            >
                 <img src={images.IMG_SHAPE_DOG2} className="w-24" />
-            </div>
+            </motion.div>
             <div className="container mx-auto">
-                <div className="grid md:grid-cols-4 grid-cols-1 pb-10">
+                <motion.div
+                    variants={fadeUpVariants}
+                    animate={controls}
+                    transition={{ delay: 0.3, duration: 0.3, type: 'tween' }}
+                    className="grid md:grid-cols-4 grid-cols-1 pb-10"
+                >
                     <div className="footer-info md:pr-10 pr-0 md:mb-0 mb-4 flex flex-col md:items-start items-center">
                         <img src={images.IMG_LOGO} className="w-36" />
                         <p className="text-[14px] leading-[24px] mt-4 text-gray-600 md:text-left text-center">
@@ -108,14 +131,19 @@ const Footer = () => {
                             <img src={images.IMG_GOOGLE_PLAY} className="ml-2" />
                         </div>
                     </div>
-                </div>
-                <div className="flex md:flex-row flex-col items-center justify-between md:py-6 py-4 md:px-8 px-0 border-t border-dashed">
+                </motion.div>
+                <motion.div
+                    variants={zoomInAndOutVariants}
+                    animate={controls}
+                    transition={{ delay: 0.3, duration: 0.6, type: 'tween' }}
+                    className="flex md:flex-row flex-col items-center justify-between md:py-6 py-4 md:px-8 px-0 border-t border-dashed"
+                >
                     <p className="text-[12px] md:text-left text-center">
                         Copyright © {date.getFullYear()} Pawsitive. Redesign by{' '}
                         <span className="text-primary-900">Do Kim Phuong.</span> All rights reserved.
                     </p>
                     <img className="md:mt-0 mt-4 w-auto md:h-auto h-5" src={images.IMG_PAYMENT} />
-                </div>
+                </motion.div>
             </div>
         </footer>
     );

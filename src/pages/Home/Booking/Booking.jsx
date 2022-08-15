@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { FaDog } from 'react-icons/fa';
 
 // images
@@ -5,6 +6,10 @@ import { images } from '~/constants/images';
 
 // components
 import BookingForm from './BookingForm';
+
+// hooks
+import { fadeToLeftVariants, fadeUpVariants } from '~/animations/animations';
+import { useScroll } from '~/hooks/useScroll';
 
 const formBg = {
     backgroundImage: `url("${images.IMG_BOOKING_FORM_BG}")`,
@@ -14,8 +19,11 @@ const formBg = {
 };
 
 const Booking = () => {
+    // Hook useScroll
+    const [element, controls] = useScroll();
     return (
         <section
+            ref={element}
             className="relative before:content[''] before:-z-30 before:absolute before:bg-line md:before:rotate-45 before:bg-no-repeat before:-top-10 before:left-0 before:right-0 before:h-full"
             id="booking"
         >
@@ -27,21 +35,38 @@ const Booking = () => {
             </div>
             <div className="container mx-auto grid md:grid-cols-2 md:gap-8 grid-cols-1">
                 <div className="flex items-center sm:mt-44 lg:mt-0 md:mb-0 mt-32 mb-28 relative lg:w-[120%] lg:-ml-[120px] w-full ml-0">
-                    <div className="absolute z-1 rounded-br-3xl">
+                    <motion.div
+                        variants={fadeToLeftVariants}
+                        animate={controls}
+                        className="absolute z-1 rounded-br-3xl"
+                    >
                         <img src={images.IMG_BOOKING1} className="rounded-br-[40px]" />
-                    </div>
-                    <div className="absolute z-2">
+                    </motion.div>
+                    <motion.div variants={fadeToLeftVariants} animate={controls} className="absolute z-2">
                         <img src={images.IMG_BOOKING2} />
-                    </div>
-                    <div className="absolute z-3">
+                    </motion.div>
+                    <motion.div
+                        variants={fadeToLeftVariants}
+                        transition={{ delay: 0.3, type: 'spring' }}
+                        animate={controls}
+                        className="absolute z-3"
+                    >
                         <img src={images.IMG_BOOKING3} />
-                    </div>
-                    <div className="absolute z-4">
+                    </motion.div>
+                    <motion.div
+                        variants={fadeToLeftVariants}
+                        animate={controls}
+                        transition={{ delay: 0.4, type: 'spring' }}
+                        className="absolute z-4"
+                    >
                         <img src={images.IMG_BOOKING4} />
-                    </div>
+                    </motion.div>
                 </div>
-                <div className="mt-10 sm:mt-32">
-                    <div
+                <div className="mt-16 sm:mt-32">
+                    <motion.div
+                        variants={fadeUpVariants}
+                        transition={{ delay: 0.3, duration: 0.3, type: 'tween' }}
+                        animate={controls}
                         className="form py-10 md:px-12 px-5 rounded-2xl shadow-large border border-dashed border-primary-300"
                         style={formBg}
                     >
@@ -52,7 +77,7 @@ const Booking = () => {
                             Booking now
                         </p>
                         <BookingForm />
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </section>

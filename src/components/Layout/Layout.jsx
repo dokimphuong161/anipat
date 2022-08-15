@@ -2,14 +2,16 @@ import Footer from '../Footer';
 import GoToTop from '../GoToTop';
 import Header from '../Header';
 
+import { motion } from 'framer-motion';
+
 const Layout = (props) => {
     return (
-        <section>
+        <motion.section initial="hidden" animate="show">
             <Header />
             {props.children}
             <Footer />
             <GoToTop />
-        </section>
+        </motion.section>
     );
 };
 

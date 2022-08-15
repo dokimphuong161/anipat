@@ -1,5 +1,6 @@
 import { MdClose, MdPhoneInTalk } from 'react-icons/md';
 import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
 
 // data
@@ -9,7 +10,15 @@ import { menuItems } from '~/data/initData';
 import MenuMobileItem from './MenuMobileItem';
 import Button from '~/components/Button';
 
-const MenuMobile = ({ open, onClose }) => {
+// animations
+import {
+    menuItemVariants,
+    menuMobileItemVariants,
+    toggleMenuMobileVariants,
+    toggleOverlayVariants,
+} from '~/animations/animations';
+
+const MenuMobile = ({ isOpen, onClose }) => {
     // Get menu items data
     const [menus, setMenus] = useState([]);
     useEffect(() => {
@@ -21,20 +30,19 @@ const MenuMobile = ({ open, onClose }) => {
     }, []);
 
     return (
-        <>
-            <div className={`overlay lg:hidden ${open ? 'block' : 'hidden'}`}></div>
-            <div
-                className={`z-50 fixed overflow-scroll scrollbar-hide top-0 py-16 pl-6 bg-white sm:w-1/2 md:w-2/5 w-3/4 h-full  duration-500 lg:hidden ${
-                    open ? 'right-0' : 'right-[-100%]'
-                }`}
+        <motion.div initial={false} animate={isOpen ? 'open' : 'closed'}>
+            <motion.div variants={toggleOverlayVariants} className={`overlay lg:hidden`}></motion.div>
+            <motion.div
+                variants={toggleMenuMobileVariants}
+                className={`z-50 fixed overflow-scroll scrollbar-hide top-0 py-16 pl-6 bg-white sm:w-1/2 md:w-2/5 w-3/4 h-full  duration-500 lg:hidden right-0`}
             >
                 <MdClose onClick={onClose} className="absolute top-4 right-4 text-3xl text-gray-700" />
-                <nav>
+                <motion.nav variants={menuItemVariants}>
                     {menus.map((menu, index) => (
                         <MenuMobileItem items={menu} key={index} />
                     ))}
-                </nav>
-                <div className="flex mt-4">
+                </motion.nav>
+                <motion.div variants={menuMobileItemVariants} className="flex mt-4">
                     <Button
                         className="text-[14px] font-bold group hover:bg-black"
                         hasIcon
@@ -46,19 +54,19 @@ const MenuMobile = ({ open, onClose }) => {
                     >
                         +84 967028275
                     </Button>
-                </div>
-            </div>
-        </>
+                </motion.div>
+            </motion.div>
+        </motion.div>
     );
 };
 
 MenuMobile.propTypes = {
-    open: PropTypes.bool.isRequired,
+    isOpen: PropTypes.bool.isRequired,
     onClose: PropTypes.func.isRequired,
 };
 
 MenuMobile.defaultProps = {
-    open: false,
+    isOpen: false,
     onClose: null,
 };
 

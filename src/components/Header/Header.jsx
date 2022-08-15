@@ -1,5 +1,6 @@
-import { useEffect, useRef, useState } from 'react';
-import { BiMenuAltRight } from 'react-icons/bi';
+import { motion, useCycle } from 'framer-motion';
+import { useEffect, useRef } from 'react';
+
 import { RiMenu4Line } from 'react-icons/ri';
 
 // components
@@ -9,11 +10,16 @@ import MenuMobile from './MenuMobile/MenuMobile';
 // constants
 import { images } from '~/constants/images';
 
+// animation
+import { bannerInfoVariants, headerVariants } from '~/animations/animations';
+
 const Header = () => {
-    // Handle to open menu mobile
-    const [openMenu, setOpenMenu] = useState(false);
-    const handleMenuMobile = () => {
-        setOpenMenu((prev) => !prev);
+    // Handle to open menu mobile using Framer Motion
+    const [isOpen, toggleOpen] = useCycle(false, true);
+    console.log({ isOpen });
+
+    const handleToggleMenu = () => {
+        toggleOpen();
     };
 
     //Handle header fade when scroll down/scroll up
@@ -37,14 +43,16 @@ const Header = () => {
         };
     }, []);
     return (
-        <header
+        <motion.header
+            variants={headerVariants}
+            transition={{ delay: 0.3, duration: 0.6, type: 'tween' }}
             ref={headerRef}
-            className="fixed z-50 bg-white shadow-sm w-full py-3 md:bg-transparent md:shadow-none lg:py-0 "
+            className="fixed z-50 bg-white shadow-md w-full py-3 md:bg-transparent md:shadow-none lg:py-0 "
         >
             <div className="container mx-auto md:flex md:items-center">
                 <div className="flex md:flex-row-reverse gap-x-4 justify-between items-center md:w-auto w-full md:px-0 px">
                     <img alt="No image" src={images.IMG_LOGO} className="md:w-40 w-32" />
-                    <div className="lg:hidden block" onClick={handleMenuMobile}>
+                    <div className="lg:hidden block" onClick={handleToggleMenu}>
                         <RiMenu4Line className="text-3xl text-gray-700" />
                     </div>
                 </div>
@@ -52,9 +60,9 @@ const Header = () => {
                 <MenuDesktop />
 
                 {/* Menu for mobile */}
-                <MenuMobile open={openMenu} onClose={handleMenuMobile} />
+                <MenuMobile isOpen={isOpen} onClose={handleToggleMenu} />
             </div>
-        </header>
+        </motion.header>
     );
 };
 

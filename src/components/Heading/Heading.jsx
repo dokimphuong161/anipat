@@ -2,9 +2,9 @@ import React from 'react';
 import { FaDog } from 'react-icons/fa';
 import PropTypes from 'prop-types';
 
-const Heading = ({ title, heading, description, className, center }) => {
+const Heading = ({ title, heading, description, className, center, ...resProps }) => {
     return (
-        <div className={`flex flex-col lg:items-start items-center  ${className}`}>
+        <div {...resProps} className={`flex flex-col lg:items-start items-center  ${className}`}>
             <p
                 className={`flex justify-center text-orange-500 uppercase text-[14px] font-bold ${
                     center ? 'justify-center mx-auto' : ''

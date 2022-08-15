@@ -1,10 +1,9 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+
+// hooks
 
 // images
 import { images } from '~/constants/images';
-
-// components
 import Button from '~/components/Button';
 
 //Setting background for service item

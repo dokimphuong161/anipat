@@ -137,7 +137,7 @@
 
     /* Fixed header */
     .scrolled {
-        @apply fixed !bg-white w-full left-0 right-0 top-0 -mt-32 !shadow-sm;
+        @apply fixed !bg-white w-full left-0 right-0 top-0 -mt-32 !shadow-md;
     }
     .awake {
         @apply mt-0 transition-all duration-300;

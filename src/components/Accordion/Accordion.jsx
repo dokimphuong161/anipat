@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
+import { AnimatePresence, motion } from 'framer-motion';
 
 const Accordion = ({ items }) => {
     const [active, setActive] = useState(true);

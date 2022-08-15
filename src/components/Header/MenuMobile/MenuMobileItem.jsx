@@ -1,7 +1,11 @@
 import { useState } from 'react';
 import { Link } from 'react-scroll';
+import { motion } from 'framer-motion';
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 import PropTypes from 'prop-types';
+
+// animations
+import { menuMobileItemVariants } from '~/animations/animations';
 
 const MenuMobileItem = ({ items }) => {
     const [openItem, setOpenItem] = useState(false);
@@ -9,7 +13,7 @@ const MenuMobileItem = ({ items }) => {
         setOpenItem((prev) => !prev);
     };
     return (
-        <div className="py-1">
+        <motion.div className="py-[6px]" variants={menuMobileItemVariants}>
             {items.children ? (
                 <>
                     <div className="flex items-center hover:text-primary-800 font-semibold" onClick={handleToggleItem}>
@@ -18,7 +22,7 @@ const MenuMobileItem = ({ items }) => {
                             className={`transition ml-4 duration-300  ${openItem ? 'rotate-180' : ''}`}
                         />
                     </div>
-                    <div className={`px-6 h-0 overflow-hidden ${openItem ? 'h-auto pt-1 ' : ''}`}>
+                    <div className={`px-6 h-0 overflow-hidden border-b-0 ${openItem ? 'h-auto pt-[6px] ' : ''}`}>
                         {items.children.map((submenu, index) => (
                             <MenuMobileItem items={submenu} key={index} />
                         ))}
@@ -39,7 +43,7 @@ const MenuMobileItem = ({ items }) => {
                     </Link>
                 </>
             )}
-        </div>
+        </motion.div>
     );
 };
 
