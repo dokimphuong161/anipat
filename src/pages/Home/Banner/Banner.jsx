@@ -49,7 +49,7 @@ const Banner = () => {
         <section className="banner md:pt-32 pt-28" style={backgroundImg} id="home">
             <motion.div
                 variants={fadeToLeftVariants}
-                transition={{ delay: 0.3, duration: 0.6, type: 'tween' }}
+                transition={{ delay: 0.2, duration: 0.4, type: 'tween' }}
                 className="container mx-auto flex items-center justify-between"
             >
                 <div className="banner-content w-full lg:w-[45%] lg:pr-5">
@@ -76,7 +76,7 @@ const Banner = () => {
             <div className="banner-img relavive hidden lg:block">
                 <motion.img
                     variants={hideAndShowVariants}
-                    transition={{ delay: 0.3, duration: 0.6, type: 'tween' }}
+                    transition={{ delay: 0.1, duration: 0.3, type: 'tween' }}
                     alt="No image"
                     src={images.IMG_BANNER}
                     className=" absolute top-0 right-0 md:w-[55%] "

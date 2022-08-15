@@ -11,7 +11,7 @@ import MenuMobile from './MenuMobile/MenuMobile';
 import { images } from '~/constants/images';
 
 // animation
-import { bannerInfoVariants, headerVariants } from '~/animations/animations';
+import { headerVariants } from '~/animations/animations';
 
 const Header = () => {
     // Handle to open menu mobile using Framer Motion
@@ -45,7 +45,7 @@ const Header = () => {
     return (
         <motion.header
             variants={headerVariants}
-            transition={{ delay: 0.3, duration: 0.6, type: 'tween' }}
+            transition={{ delay: 0.1, duration: 0.3, type: 'tween' }}
             ref={headerRef}
             className="fixed z-50 bg-white shadow-md w-full py-3 md:bg-transparent md:shadow-none lg:py-0 "
         >
