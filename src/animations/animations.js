@@ -74,14 +74,14 @@ export const toggleMenuMobileVariants = {
     open: {
         clipPath: `circle(1000px at 100% 0)`,
         transition: {
-            duration: 0.2,
+            duration: 0.1,
         },
     },
     closed: {
         clipPath: `circle(0px at 100% 0)`,
         transition: {
             duration: 0.1,
-            delay: 0.2,
+            delay: 0.1,
         },
     },
 };
@@ -98,16 +98,16 @@ export const menuMobileItemVariants = {
         y: 0,
         opacity: 1,
         transition: {
-            duration: 0.4,
-            ease: [0.6, 0.05, -0.1, 0.6],
+            duration: 0.2,
+            ease: [0.6, 0.05, -0.1, 0.9],
         },
     },
     closed: {
         y: 50,
         opacity: 0,
         transition: {
-            duration: 0.4,
-            ease: [0.6, 0.05, -0.1, 0.6],
+            duration: 0.2,
+            ease: [0.6, 0.05, -0.1, 0.9],
         },
     },
 };
