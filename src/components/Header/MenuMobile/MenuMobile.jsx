@@ -34,7 +34,7 @@ const MenuMobile = ({ isOpen, onClose }) => {
             <motion.div variants={toggleOverlayVariants} className={`overlay lg:hidden`}></motion.div>
             <motion.div
                 variants={toggleMenuMobileVariants}
-                className={`z-50 fixed overflow-scroll scrollbar-hide top-0 py-16 pl-6 bg-white sm:w-1/2 md:w-2/5 w-3/4 h-full  duration-500 lg:hidden right-0`}
+                className={`z-50 fixed overflow-scroll scrollbar-hide top-0 py-16 pl-6 bg-white sm:w-1/2 md:w-2/5 w-3/4 h-full lg:hidden right-0`}
             >
                 <MdClose onClick={onClose} className="absolute top-4 right-4 text-3xl text-gray-700" />
                 <motion.nav variants={menuItemVariants}>

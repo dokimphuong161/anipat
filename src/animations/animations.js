@@ -66,7 +66,7 @@ export const toggleOverlayVariants = {
         visibility: 'hidden',
         transition: {
             duration: 0.2,
-            delay: 0.2,
+            delay: 0.1,
         },
     },
 };
@@ -74,13 +74,13 @@ export const toggleMenuMobileVariants = {
     open: {
         clipPath: `circle(1000px at 100% 0)`,
         transition: {
-            duration: 0.1,
+            duration: 0.4,
         },
     },
     closed: {
         clipPath: `circle(0px at 100% 0)`,
         transition: {
-            duration: 0.1,
+            duration: 0.4,
             delay: 0.1,
         },
     },
