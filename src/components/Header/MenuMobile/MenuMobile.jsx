@@ -49,7 +49,7 @@ const MenuMobile = ({ isOpen, onClose }) => {
                         primary
                         small
                         leftIcon={<MdPhoneInTalk />}
-                        href="https://www.youtube.com/watch?v=LPGQoWG7pno&t=698s"
+                        href="https://github.com/dokimphuong161"
                         target="_blank"
                     >
                         +84 967028275
